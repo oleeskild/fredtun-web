@@ -35,7 +35,7 @@ query Events {
 import Event from "~/components/Event.vue";
 import PageHeader from "~/components/PageHeader.vue";
 import "bulma-calendar/dist/css/bulma-calendar.min.css";
-import bulmaCalendar from "bulma-calendar";
+let bulmaCalendar;
 export default {
   components: {
     Event,
