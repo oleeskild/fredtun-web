@@ -1,0 +1,16 @@
+{
+  "name": "fredtun-static",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "bulma": "^0.7.5",
+    "bulma-calendar": "^6.0.7",
+    "gridsome": "^0.7.0",
+    "gridsome-source-sanity": "^1.0.2",
+    "sanity-blocks-vue-component": "^0.1.0"
+  }
+}
