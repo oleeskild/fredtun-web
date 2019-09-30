@@ -48,6 +48,7 @@ export default {
     };
   },
   mounted() {
+    bulmaCalendar = require('bulma-calendar');
     const calendar = bulmaCalendar.attach(this.$refs.calendarTrigger, {
       startDate: this.date
     })[0];
