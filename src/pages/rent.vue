@@ -6,70 +6,19 @@
         <div class="tiles">
           <div class="tile is-ancestor">
             <div class="tile is-vertical">
-              <div class="tile is-parent is-12">
+              <div class="tile is-parent is-12" v-for="{node} in bigRentUnits" :key="node.id">
                 <article class="tile is-child notification is-brand">
-                  <p class="tile-title-big">Leie av hele Fredtun ved overnatting</p>
-                  <p>175,- pr natt pr person</p>
+                  <p class="tile-title-big">{{node.name}}</p>
+                  <p>{{node.price}},- {{node.priceDenomination}}</p>
                   <p class="tile-subtitle">Minstepris:</p>
-                  <p>7000,- pr helg</p>
-                  <p>3500,- pr helg for barneleirer</p>
+                  <p>{{node.minPrice}},- {{node.minPriceDenomination}}</p>
+                  <p>{{node.minPriceAlternative}},- {{node.minPriceAlternativeDenomination}}</p>
                   <span @click="openModal = true" class="more-info">Mer Info</span>
                 </article>
               </div>
-              <div class="tile">
-                <div class="tile is-parent is-6">
-                  <article class="tile is-child notification">
-                    <p class="tile-title">Hovedbygningen</p>
-                    <p>3000,- pr døgn</p>
-                    <span @click="openModal = true" class="more-info">Mer Info</span>
-                  </article>
-                </div>
-                <div class="tile is-parent is-6">
-                  <article class="tile is-child notification">
-                    <p class="tile-title">Aktivitetshus</p>
-                    <p>3000,- pr døgn</p>
-                    <span @click="openModal = true" class="more-info">Mer Info</span>
-                  </article>
-                </div>
-              </div>
-
-              <div class="tile">
-                <div class="tile is-parent is-6">
-                  <article class="tile is-child notification">
-                    <p class="tile-title">Internat (vest side)</p>
-                    <p>175,- pr natt pr person</p>
-                    <p class="tile-subtitle">Minstepris:</p>
-                    <p>1500,- pr døgn</p>
-                    <span @click="openModal = true" class="more-info">Mer Info</span>
-                  </article>
-                </div>
-                <div class="tile is-parent is-6">
-                  <article class="tile is-child notification">
-                    <p class="tile-title">Internat (øst side)</p>
-                    <p>175,- pr natt pr person</p>
-                    <p class="tile-subtitle">Minstepris:</p>
-                    <p>1500,- pr døgn</p>
-                    <span @click="openModal = true" class="more-info">Mer Info</span>
-                  </article>
-                </div>
-              </div>
-
-              <div class="tile">
-                <div class="tile is-parent is-6">
-                  <article class="tile is-child notification">
-                    <p class="tile-title">Kapell</p>
-                    <p>1000,- pr døgn</p>
-                    <span @click="openModal = true" class="more-info">Mer Info</span>
-                  </article>
-                </div>
-
-                <div class="tile is-parent is-6">
-                  <article class="tile is-child notification">
-                    <p class="tile-title">Tillegg for vask</p>
-                    <p>170,- pr time</p>
-                    <span @click="openModal = true" class="more-info">Mer Info</span>
-                  </article>
-                </div>
+              <div class="tile" v-for="index in smallRentUnits.length/2" :key="index">
+                <rent-tile @moreInfo="openModal = true" :rentUnit="smallRentUnits[(index-1)*2].node"/>
+                <rent-tile @moreInfo="openModal = true" :rentUnit="smallRentUnits[((index-1)*2)+1].node"/>
               </div>
             </div>
           </div>
@@ -113,18 +62,48 @@
     </div>
   </Layout>
 </template>
+<page-query>
+query RentUnits {
+  units: allSanityRentunit(sortBy: "order", order: ASC){
+    edges{
+      node{
+        id
+        name
+        price
+        priceDenomination
+        minPrice
+        minPriceDenomination
+        minPriceAlternative
+        minPriceAlternativeDenomination
+        _rawDescription
+        isprimary
+      }
+    }
+  }
+}
+</page-query>
 <script>
 import PageHeader from "~/components/PageHeader.vue";
 import ContactForm from "~/components/ContactForm.vue";
+import RentTile from "~/components/RentTile.vue";
 export default {
   components: {
     PageHeader,
-    ContactForm
+    ContactForm,
+    RentTile
   },
   data() {
     return {
       openModal: false
     };
+  },
+  computed: {
+    smallRentUnits: function(){
+      return this.$page.units.edges.filter(x=> !x.node.isprimary);
+    },
+    bigRentUnits: function(){
+      return this.$page.units.edges.filter(x=> x.node.isprimary);
+    }
   }
 };
 </script>
