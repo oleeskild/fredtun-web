@@ -1,11 +1,9 @@
 <template>
     <Layout>
-        <page-header :title="'Om Fredtun'" />
+        <page-header :title="$page.about.title" />
         <div class="content">
         <div class="intro">
-            Fredtun leirsted ligger et par km nord for Skudeneshavn på østsiden av Karmøy. Stedet er omkranset av fjell og vender mot sjøen ved sør-enden
-av Karmsundet. Man kommer inn på området gjennom et naturlig smalt pass mellom de to fjellryggene som strekker seg ned mot sjøen på hver
-side av området. Innenfor er det opparbeidet med fotballbane, lekeplass, plener og grusveier mellom bygningene.
+            {{$page.about.description}}
         </div>
         <div class="gallery">
             <h2 class="subtitle">Galleri</h2>
@@ -14,6 +12,15 @@ side av området. Innenfor er det opparbeidet med fotballbane, lekeplass, plener
     </div>
     </Layout>
 </template>
+<page-query>
+query About {
+  about: sanityAbout(id: "global-om-fredtun"){
+        title
+        description
+        id
+  }
+}
+</page-query>
 <script>
 import PageHeader from '~/components/PageHeader.vue'
 import Gallery from '~/components/Gallery.vue'

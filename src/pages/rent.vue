@@ -13,29 +13,20 @@
                   <p class="tile-subtitle">Minstepris:</p>
                   <p>{{node.minPrice}},- {{node.minPriceDenomination}}</p>
                   <p>{{node.minPriceAlternative}},- {{node.minPriceAlternativeDenomination}}</p>
-                  <span @click="openModal = true" class="more-info">Mer Info</span>
+                  <span @click="selectedNode = node; openModal = true" class="more-info">Mer Info</span>
                 </article>
               </div>
               <div class="tile" v-for="index in smallRentUnits.length/2" :key="index">
-                <rent-tile @moreInfo="openModal = true" :rentUnit="smallRentUnits[(index-1)*2].node"/>
-                <rent-tile @moreInfo="openModal = true" :rentUnit="smallRentUnits[((index-1)*2)+1].node"/>
+                <rent-tile @moreInfo="openModal = true" @moreInfoClicked="selectNode($event)" :rentUnit="smallRentUnits[(index-1)*2].node"/>
+                <rent-tile @moreInfo="openModal = true" @moreInfoClicked="selectNode($event)" :rentUnit="smallRentUnits[((index-1)*2)+1].node"/>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="column is-center">
-        <h2 class="subtitle">Info</h2>
-        <ul>
-          <li>Prisene er oppgitt i kroner.</li>
-          <li>
-            Disse prisene er fastsatt den 21.2.2019.
-            Det er mulig at publisert prisliste ikke blir oppdatert øyeblikkelig ved endring av prisene.
-            Da er det priser som oppgis ved forespørsel/bestilling som vil gjelde.
-          </li>
-
-          <li>Utleie forutsetter aksept av vilkårene som er satt for avtalen om bruk av stedet.</li>
-        </ul>
+        <h2 class="subtitle">{{$page.priceInfo.title}}</h2>
+          {{$page.priceInfo.description}}
         <h2 class="subtitle" style="margin-top: 40px;">Ta kontakt</h2>
         <contact-form />
       </div>
@@ -45,25 +36,22 @@
       <div @click="openModal = false" class="modal-background"></div>
       <div class="modal-card">
         <header class="modal-card-head">
-         <p class="modal-card-title">Aktivitetshus</p>
+         <p class="modal-card-title">{{selectedNode.name}}</p>
       <button @click="openModal = false" class="delete" aria-label="close"></button>
     </header>
     <section class="modal-card-body">
-        Huset er egnet for møte med servering i hovedetasjen samt spill aktiviteter i underetasjen.
-        Det er ? rom på loftet med til sammen ? køyer som f.eks ledere kan benytte.
-        <img src="http://fredtunleirsted.no/wp-content/uploads/2016/11/IMG_2705-768x432.jpg" />
-        Møtesalen har ? bord og ? stoler slik at et selskap på ?? personer kan sitte ved småbord og få servering.
-        Kjøkken kapasitet og dekketøy??
-        Underetasjen har disse spillene:
-        Pingpongbord m 2 køller og 1 ball, Biljardbord med 1 hel køe og 3 som er knekt, mangler ball nummer 8. 
-        <img src="http://fredtunleirsted.no/wp-content/uploads/2016/11/IMG_2706-768x432.jpg" />
+       <rich-content :blocks="selectedNode._rawDescription || []" />
     </section>
       </div>
     </div>
   </Layout>
 </template>
 <page-query>
-query RentUnits {
+query {
+   priceInfo: sanityAbout(id:"global-info-priser"){
+    title
+    description
+  }
   units: allSanityRentunit(sortBy: "order", order: ASC){
     edges{
       node{
@@ -94,7 +82,8 @@ export default {
   },
   data() {
     return {
-      openModal: false
+      openModal: false,
+      selectedNode: {}
     };
   },
   computed: {
@@ -103,6 +92,13 @@ export default {
     },
     bigRentUnits: function(){
       return this.$page.units.edges.filter(x=> x.node.isprimary);
+    }
+  },
+  methods: {
+    selectNode(node){
+      this.selectedNode = {};
+      this.selectedNode = node;
+      this.openModal = true;
     }
   }
 };

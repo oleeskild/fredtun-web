@@ -15,7 +15,7 @@ export default {
   props: ['rentUnit'],
   methods: {
       moreInfoClicked(){
-          this.$emit('moreInfo');
+          this.$emit('moreInfoClicked',this.rentUnit);
       }
   }
 };
