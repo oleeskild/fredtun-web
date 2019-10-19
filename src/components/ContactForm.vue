@@ -13,9 +13,9 @@
           <input name="bot-field" />
         </label>
       </p>
-      <input class="input" type="text" placeholder="Navn" v-model="formData.name" />
-      <input class="input" type="text" placeholder="Din epost" v-model="formData.email" />
-      <textarea class="textarea" placeholder="Melding" v-model="formData.message"></textarea>
+      <input class="input" name="name" type="text" placeholder="Navn" v-model="formData.name" />
+      <input class="input" name="email" type="email" placeholder="Din epost" v-model="formData.email" />
+      <textarea class="textarea" name="message" placeholder="Melding" v-model="formData.message"></textarea>
       <button type="submit" class="button is-medium is-link">SEND MELDING</button>
     </form>
   </div>
