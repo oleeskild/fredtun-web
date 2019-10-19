@@ -3,16 +3,16 @@
     <page-header :title="'Arrangementer'" :subtitle="`Fra og med ${niceDate}`" />
     <div class="columns wrap">
       <div class="column">
-        <event @selected="selectEvent(edge.node)" :key="edge.node.id" v-for="edge in $page.events.edges" :event="edge.node" />
+        <event @selected="selectEvent(edge.node)" :key="edge.node.id" v-for="edge in allEvents" :event="edge.node" />
       </div>
       <div class="column is-one-third calendar">
-        <input
+        <!-- <input
           type="date"
           ref="calendarTrigger"
           data-display-mode="inline"
           data-today-label="Idag"
           data-show-clear-button="false"
-        />
+        /> -->
       </div>
     </div>
   </Layout>
@@ -61,6 +61,12 @@ export default {
       if (this.date) {
         return this.date.toLocaleDateString();
       }
+    },
+    allEvents(){
+      var date = new Date();
+      date.setDate(date.getDate() -1);
+
+      return this.$page.events.edges.filter(e=> e.node.date > date.toISOString())
     }
   },
   methods: {
