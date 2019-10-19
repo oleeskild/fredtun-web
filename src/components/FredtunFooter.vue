@@ -4,7 +4,7 @@
       <div class="column contact-form">
         <div class="lightgreen"></div>
         
-        <div>
+        <div style="display:flex; flex-direction: column; align-items: center">
         <h2 class="subtitle">Ta kontakt</h2>
         <div style="margin:0 10px;">
         <contact-form />

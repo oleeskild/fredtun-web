@@ -1,6 +1,7 @@
 <template>
-  <div class="form">
+  <div class="form" >
     <form
+      v-if="!submitted"
       name="contact"
       method="POST"
       data-netlify="true"
@@ -16,15 +17,22 @@
       <input class="input" name="name" type="text" placeholder="Navn" v-model="formData.name" />
       <input class="input" name="email" type="email" placeholder="Din epost" v-model="formData.email" />
       <textarea class="textarea" name="message" placeholder="Melding" v-model="formData.message"></textarea>
-      <button type="submit" class="button is-medium is-link">SEND MELDING</button>
+      <button  type="submit" class="button is-medium is-link">SEND MELDING</button>
     </form>
+    <div v-else style="display: flex; flex-direction: column; align-items: center">
+        <span style="font-size: 150px; margin: 50px 0" class="icon has-text-white">
+            <font-awesome :icon="['fas', 'envelope']"/>
+        </span>
+        <h2 style="font-size: 20px; color: white;">Takk, vi har motatt meldingen din!</h2>
+    </div>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      formData: {}
+      formData: {},
+      submitted: false
     };
   },
   methods: {
@@ -44,7 +52,7 @@ export default {
           ...this.formData
         })
       })
-        .then(() => {alert("sendt inn"); this.formData = {}})
+        .then(() => {this.submitted = true; this.formData = {}})
         .catch(error => alert(error));
     }
   }
