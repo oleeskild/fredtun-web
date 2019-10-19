@@ -26,7 +26,8 @@
       </div>
       <div class="column is-center">
         <h2 class="subtitle">{{$page.priceInfo.title}}</h2>
-          {{$page.priceInfo.description}}
+          <!-- {{$page.priceInfo.description}} -->
+          <rich-content :blocks="$page.priceInfo._rawDescription" />
         <h2 class="subtitle" style="margin-top: 40px;">Ta kontakt</h2>
         <contact-form />
       </div>
@@ -50,7 +51,7 @@
 query {
    priceInfo: sanityAbout(id:"global-info-priser"){
     title
-    description
+    _rawDescription
   }
   units: allSanityRentunit(sortBy: "order", order: ASC){
     edges{

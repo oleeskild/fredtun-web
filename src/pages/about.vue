@@ -3,11 +3,7 @@
         <page-header :title="$page.about.title" />
         <div class="content">
         <div class="intro">
-            {{$page.about.description}}
-        </div>
-        <div class="gallery">
-            <h2 class="subtitle">Galleri</h2>
-            <gallery />
+            <rich-content :blocks="$page.about._rawDescription" />
         </div>
     </div>
     </Layout>
@@ -16,7 +12,7 @@
 query About {
   about: sanityAbout(id: "global-om-fredtun"){
         title
-        description
+        _rawDescription
         id
   }
 }

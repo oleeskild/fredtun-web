@@ -2,6 +2,7 @@
 <div>
 <div class="images">
     <div @click="selectedImage = image" v-for="(image, index) in images" :key="index" class="image-square" v-lazy:background-image="image"></div>
+
 </div>
 
 <div class="modal" :class="{'is-active': selectedImage}">
