@@ -1,9 +1,11 @@
 <template>
     <div class="form">
+        <form name="contact" method="POST" data-netlify="true">
           <input class="input" type="text" placeholder="Navn" />
           <input class="input" type="text" placeholder="Din epost" />
           <textarea class="textarea" placeholder="Melding"></textarea>
-          <button class="button is-medium is-link">SEND MELDING</button>
+          <button type="submit" class="button is-medium is-link">SEND MELDING</button>
+        </form>
 
         </div>
 </template>
