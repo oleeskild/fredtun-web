@@ -13,15 +13,20 @@
           <input name="bot-field" />
         </label>
       </p>
-      <input class="input" type="text" placeholder="Navn" />
-      <input class="input" type="text" placeholder="Din epost" />
-      <textarea class="textarea" placeholder="Melding"></textarea>
+      <input class="input" type="text" placeholder="Navn" v-model="formData.name" />
+      <input class="input" type="text" placeholder="Din epost" v-model="formData.email" />
+      <textarea class="textarea" placeholder="Melding" v-model="formData.message"></textarea>
       <button type="submit" class="button is-medium is-link">SEND MELDING</button>
     </form>
   </div>
 </template>
 <script>
 export default {
+  data() {
+    return {
+      formData: {}
+    };
+  },
   methods: {
     encode(data) {
       return Object.keys(data)
@@ -39,7 +44,7 @@ export default {
           ...this.formData
         })
       })
-        .then(() => alert("sendt inn"))
+        .then(() => {alert("sendt inn"); this.formData = {}})
         .catch(error => alert(error));
     }
   }
