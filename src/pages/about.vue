@@ -12,7 +12,7 @@
 query About {
   about: sanityAbout(id: "global-om-fredtun"){
         title
-        _rawDescription
+        _rawDescription(resolveReferences: {maxDepth: 2})
         id
   }
 }
@@ -21,13 +21,16 @@ query About {
 import PageHeader from '~/components/PageHeader.vue'
 import Gallery from '~/components/Gallery.vue'
 export default {
+    metaInfo: {
+        title: "Om Fredtun"
+    },
    components: {
        PageHeader,
        Gallery
    } 
 }
 </script>
-<style scoped>
+<style>
 .gallery {
     margin-top: 50px;
     display: flex;

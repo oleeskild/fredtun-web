@@ -37,6 +37,7 @@ import PageHeader from "~/components/PageHeader.vue";
 import "bulma-calendar/dist/css/bulma-calendar.min.css";
 let bulmaCalendar;
 export default {
+  metaInfo: { title: "Arrangementer | Fredtun" },
   components: {
     Event,
     PageHeader

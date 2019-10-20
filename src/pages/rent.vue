@@ -51,7 +51,7 @@
 query {
    priceInfo: sanityAbout(id:"global-info-priser"){
     title
-    _rawDescription
+    _rawDescription(resolveReferences: {maxDepth: 2})
   }
   units: allSanityRentunit(sortBy: "order", order: ASC){
     edges{
