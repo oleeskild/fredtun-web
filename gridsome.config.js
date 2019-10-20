@@ -5,7 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Fredtun',
   plugins: [{
     use: 'gridsome-source-sanity',
     options: {

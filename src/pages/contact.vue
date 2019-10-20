@@ -56,7 +56,7 @@ import PageHeader from "~/components/PageHeader.vue";
 import ContactForm from "~/components/ContactForm.vue";
 import Map from "~/components/Map.vue";
 export default {
-  metaInfo: { title: "Kontakt Oss | Fredtun" },
+  metaInfo: { title: "Kontakt Oss" },
   components: {
     PageHeader,
     ContactForm,

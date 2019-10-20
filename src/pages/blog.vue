@@ -35,7 +35,7 @@ import PageHeader from "~/components/PageHeader.vue";
 //import axios from "~/plugins/axios";
 //import marked from "marked";
 export default {
-  metaInfo: { title: "Blogg | Fredtun" },
+  metaInfo: { title: "Blogg" },
   components: {
     PageHeader
   },

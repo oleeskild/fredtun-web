@@ -18,7 +18,7 @@ import RentInfoBox from '~/components/RentInfoBox.vue'
 import FredtunFooter from '~/components/FredtunFooter.vue'
 
 export default {
-  metaInfo: { title: "Fredtun Leirsted" },
+  name: "Fremside",
   components: {
     Hero,
     Navigation,
