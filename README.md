@@ -1,6 +1,6 @@
 # Fredtun
-This is the code for the camp site [Fredtun](http://fredtunleirsted.no) located in Karmøy, Norway. It uses Gridsome in the frontend,
-which fetches the content from sanity.io
+This is the code for the camp site [Fredtun](http://fredtunleirsted.no). It uses Gridsome in the frontend,
+which fetches the content from sanity.io using graphql. 
  
 ## Build
 * If you do not have the Gridsome CLI tool available, you can install it by running ```npm install -g @gridsome/cli```
