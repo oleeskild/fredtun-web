@@ -6,13 +6,13 @@
         <event @selected="selectEvent(edge.node)" :key="edge.node.id" v-for="edge in allEvents" :event="edge.node" />
       </div>
       <div class="column is-one-third calendar">
-        <input
+        <!--input
           type="date"
           ref="calendarTrigger"
           data-display-mode="inline"
           data-today-label="Idag"
           data-show-clear-button="false"
-        />
+        /-->
       </div>
     </div>
   </Layout>
@@ -35,7 +35,7 @@ query Events {
 import Event from "~/components/Event.vue";
 import PageHeader from "~/components/PageHeader.vue";
 import "bulma-calendar/dist/css/bulma-calendar.min.css";
-import bulmaCalendar from 'bulma-calendar/dist/js/bulma-calendar.min.js';
+//import bulmaCalendar from 'bulma-calendar/dist/js/bulma-calendar.min.js';
 export default {
   metaInfo: { title: "Arrangementer" },
   components: {
@@ -49,13 +49,13 @@ export default {
     };
   },
   mounted() {
-    const calendar = bulmaCalendar.attach(this.$refs.calendarTrigger, {
-      startDate: this.date,
-      lang: "nb"
-    })[0];
-    calendar.on("select", e => {
-        this.date = e.data.startDate|| null; console.log(e)
-    });
+    //const calendar = bulmaCalendar.attach(this.$refs.calendarTrigger, {
+     // startDate: this.date,
+     // lang: "nb"
+    //})[0];
+    //calendar.on("select", e => {
+     //   this.date = e.data.startDate|| null; console.log(e)
+    //});
   },
   computed: {
     niceDate() {
