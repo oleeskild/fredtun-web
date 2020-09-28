@@ -33,7 +33,7 @@
 .rent-info {
     background-color: rgb(92, 219, 149);
     padding: 25px;
-    color: white;
+    color:black;
     min-height: 500px;
     display: flex;
     flex-direction: column;

@@ -14,7 +14,7 @@ export default {
 </script>
 <style scoped>
 .nav-link {
-    color: #05386a;
+    color: black;
 }
 .nav-item {
     text-align: center;

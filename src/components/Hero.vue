@@ -3,7 +3,7 @@
       <div class="columns">
         <div class="column is-two-fifths text-container">
             <div class="text">
-          <h1 class="subtitle">Fredtun Leirsted</h1>
+          <h1 class="title" style="color:black">Fredtun Leirsted</h1>
           <p>
             Fredtun leirsted ligger et par km nord for Skudeneshavn
             på østsiden av Karmøy. Stedet er omkranset av fjell og vender mot
@@ -52,6 +52,10 @@ export default {
 .text, .button {
     z-index: 2;
     position: relative;
+}
+
+.text {
+    color: black;
 }
 .button{
     margin-top: 15px;
