@@ -94,4 +94,7 @@ export default {
 .tabs{
     margin-bottom: 0 !important;
 }
+.navbar-item {
+    color: black;
+}
 </style>
