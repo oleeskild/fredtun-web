@@ -92,7 +92,7 @@ export default {
   background-color: rgb(92, 219, 149);
   justify-content: center;
   height: 180px;
-  color: #389583;
+  /* color: #389583; */
 }
 .day {
   text-align: center;
@@ -115,12 +115,12 @@ export default {
 
 .event-description {
   padding: 0px 15px;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   font-size: 42px;
 }
 .event-time {
   padding: 0 15px;
-  color: rgba(255, 255, 255, 0.7);
+  color: white;
   font-size: 28px;
 }
 .event-link {

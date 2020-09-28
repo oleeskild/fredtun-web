@@ -17,7 +17,7 @@
       <input class="input" name="name" type="text" placeholder="Navn" v-model="formData.name" />
       <input class="input" name="email" type="email" placeholder="Din epost" v-model="formData.email" />
       <textarea class="textarea" name="message" placeholder="Melding" v-model="formData.message"></textarea>
-      <button  type="submit" class="button is-medium is-link">SEND MELDING</button>
+      <button  type="submit" class="button is-medium is-dark">SEND MELDING</button>
     </form>
     <div v-else style="display: flex; flex-direction: column; align-items: center">
         <span style="font-size: 150px; margin: 50px 0" class="icon has-text-white">

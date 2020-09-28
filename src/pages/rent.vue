@@ -27,7 +27,9 @@
       <div class="column is-center">
         <h2 class="subtitle">{{$page.priceInfo.title}}</h2>
           <!-- {{$page.priceInfo.description}} -->
-          <rich-content :blocks="$page.priceInfo._rawDescription" />
+          <div style="max-width: 400px;">
+            <rich-content :blocks="$page.priceInfo._rawDescription" />
+          </div>
         <h2 class="subtitle" style="margin-top: 40px;">Ta kontakt</h2>
         <contact-form />
       </div>
@@ -35,15 +37,11 @@
 
     <div class="modal" :class="{'is-active': openModal}">
       <div @click="openModal = false" class="modal-background"></div>
-      <div class="modal-card">
-        <header class="modal-card-head">
-         <p class="modal-card-title">{{selectedNode.name}}</p>
-      <button @click="openModal = false" class="delete" aria-label="close"></button>
-    </header>
-    <section class="modal-card-body">
-       <rich-content :blocks="selectedNode._rawDescription || []" />
-    </section>
+      <div class="modal-content">
+         <h2 class="modal-card-title">{{selectedNode.name}}</h2>
+        <rich-content :blocks="selectedNode._rawDescription || []" />
       </div>
+      <button @click="openModal = false" class="modal-close is-large" aria-label="close"></button>
     </div>
   </Layout>
 </template>
@@ -156,8 +154,10 @@ export default {
   padding-bottom: 3px;
   border-bottom: 2px solid;
 }
-.modal-card-body {
-    border-radius: 0 0 10px 10px;
+.modal-content {
+  background-color: white;
+  padding: 40px 70px;
+  border-radius: 20px;
 }
 @media (max-width: 1020px) {
    .tile-title {

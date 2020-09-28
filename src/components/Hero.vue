@@ -13,7 +13,7 @@
             fotballbane, lekeplass, plener og grusveier mellom bygningene.
           </p>
           </div>
-          <a href="https://www.facebook.com/FredtunSkudeneshavn/" target="_blank" class="button is-medium is-link">FØLG OSS PÅ FACEBOOK</a>
+          <a href="https://www.facebook.com/FredtunSkudeneshavn/" target="_blank" class="button is-large is-link">FØLG OSS PÅ FACEBOOK</a>
           <Bezier class="curve" />
         </div>
         <div class="column cover-image" >
@@ -75,6 +75,11 @@ export default {
 }
 .is-link:hover {
     background-color: rgba(5, 56, 106, 1);
+}
+
+p {
+    font-size: 20px;
+    padding-bottom: 20px;
 }
 
 @media (max-width: 760px){

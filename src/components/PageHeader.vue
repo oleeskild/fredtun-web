@@ -18,12 +18,20 @@ export default {
 .title, .subtitle{
     text-align: center;
 }
+
+.subtitle {
+  font-size: 38px;
+}
+
+.title {
+  font-size: 64px;
+}
 @media (max-width: 600px){
     .title {
         font-size: 48px;
     }
     .subtitle {
-        font-size: 38px;
+        font-size: 32px;
     }
 }
 </style>

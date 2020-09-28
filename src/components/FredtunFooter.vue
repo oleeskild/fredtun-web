@@ -73,7 +73,7 @@ export default {
 .subtitle {
   position: relative;
   z-index: 2;
-  color: rgb(229, 240, 221);
+  color: white;
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 0;

@@ -3,7 +3,7 @@
         <div class="wrap">
             <h2 class="event-title">Kommende Arrangement</h2>
             <event :key="edge.node.id" v-for="edge in $static.events.edges" :event="edge.node" />
-            <g-link to="/events" class="button is-link is-large">SE ALLE ARRANGEMENTER</g-link>
+            <g-link to="/events" class="button is-large is-dark">SE ALLE ARRANGEMENTER</g-link>
         </div>
     </div>
 </template>
@@ -40,7 +40,7 @@ export default {
     min-width: 1024px;
 }
 .event-title{
-    color: rgb(229, 240, 221);
+    color: white;
     font-size: 48px;
     font-weight: 700;
     padding: 10px 0;

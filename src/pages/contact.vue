@@ -33,20 +33,29 @@
     </div>
     <div class="columns">
       <div class="column">
-        <h2 class="subtitle">Send oss en melding</h2>
-        <contact-form />
+        <div class="card">
+          <div class="card-content">
+            <h2 class="subtitle" style="text-align: center;">Send oss en melding</h2>
+            <contact-form />
+          </div>
+        </div>
       </div>
       <div class="column">
         <h2 class="subtitle">Besøksadresse</h2>
         <Map />
       </div>
       <div class="column">
+         <div class="card">
+          <div class="card-content" style="text-align:center;">
         <h2 class="subtitle">Postadresse</h2>
         <ul>
           <li>Fredtun Leirsted</li>
           <li>Postboks 23</li>
           <li>4297 Skudeneshavn</li>
         </ul>
+            <font-awesome :icon="['fas', 'envelope']" class="envelope"/>
+          </div>
+         </div>
       </div>
     </div>
   </Layout>
@@ -86,7 +95,26 @@ export default {
   background-size: cover;
 }
 .subtitle {
-    text-align: center;
+    font-size: 42px;
+}
+.card {
+  width: 100%;
+  height: 100%;
+}
+
+.card-content {
+  max-width: 400px;
+  margin: auto;
+}
+
+.envelope {
+  margin-top: 30px;
+  font-size: 128px;
+}
+
+li {
+  font-size: 24px;
+  text-align: center;
 }
 @media (max-width: 900px){
     .subtitle{

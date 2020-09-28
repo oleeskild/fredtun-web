@@ -15,7 +15,7 @@
                         <li>- 7 bad</li>
                         <li>- 2 fotballbaner</li>
                     </ul>
-                    <g-link to="/rent" class="button is-medium is-link">SE MER INFO OG PRISER</g-link>
+                    <g-link to="/rent" class="button is-medium is-dark">SE MER INFO OG PRISER</g-link>
                 </div>
             </div>
         </div>
@@ -33,11 +33,14 @@
 .rent-info {
     background-color: rgb(92, 219, 149);
     padding: 25px;
-    color: rgba(255,255,255, 0.8);
+    color: white;
     min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+li {
+    font-size: 24px;
 }
 h2{
     font-size: 24px;
