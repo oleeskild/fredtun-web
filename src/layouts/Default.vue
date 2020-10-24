@@ -1,14 +1,17 @@
 <template>
   <div>
+    <banner />
     <navbar />
     <slot/>
   </div>
 </template>
 <script>
 import Navbar from '~/components/Navbar.vue';
+import Banner from '~/components/Banner.vue';
 export default {
  components: {
-   Navbar
+   Navbar,
+    Banner 
  },
  layout: 'blank' 
 }

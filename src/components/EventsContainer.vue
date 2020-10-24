@@ -57,4 +57,10 @@ export default {
 .is-link:hover {
     background-color: rgba(5, 56, 106, 1);
 }
+
+@media (max-width: 760px){
+    .button {
+        font-size: 20px;
+    }
+}
 </style>

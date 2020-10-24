@@ -32,7 +32,6 @@ export default {
     margin: 50px 20px;
     display: flex;
     justify-content: center;
-    color: black;
 }
 .columns {
     width: 100%;

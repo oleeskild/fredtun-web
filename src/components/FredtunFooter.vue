@@ -19,6 +19,7 @@
           <div class="text">Austre Karmøyveg 820, Karmøy</div>
           <Map />
         </div>
+          <div style="align-self:flex-end">© 2020 Fredtun </div>
       </div>
     </div>
   </div>
@@ -78,9 +79,11 @@ export default {
   font-weight: 700;
   margin-bottom: 0;
   margin-top: 25px;
+  padding:0;
 }
 .text {
-  font-size: 18px;
+  font-size: 24px;
+  padding-left: 10px;
 }
 .form{
     position: relative;

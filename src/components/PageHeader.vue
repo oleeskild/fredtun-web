@@ -13,10 +13,11 @@ export default {
 </script>
 <style scoped>
 .is-primary {
-  background-color: #389583;
+  background-color: rgba(0,0,0,0);
 }
 .title, .subtitle{
     text-align: center;
+    color: black !important;
 }
 
 .subtitle {

@@ -23,7 +23,7 @@
         <span style="font-size: 150px; margin: 50px 0" class="icon has-text-white">
             <font-awesome :icon="['fas', 'envelope']"/>
         </span>
-        <h2 style="font-size: 20px; color: white;">Takk, vi har motatt meldingen din!</h2>
+        <h2 style="font-size: 20px; color:black;">Takk, vi har motatt meldingen din!</h2>
     </div>
   </div>
 </template>

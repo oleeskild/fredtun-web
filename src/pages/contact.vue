@@ -77,6 +77,9 @@ export default {
 .columns {
   margin: 20px;
 }
+.content{
+  padding-left:0;
+}
 .header {
   font-size: 28px;
 }

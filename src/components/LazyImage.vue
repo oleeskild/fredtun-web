@@ -1,5 +1,5 @@
 <template>
-    <g-image style="max-width: 80%" :src="asset.url" />
+    <g-image :src="asset.url" />
 </template>
 <script>
 export default {
