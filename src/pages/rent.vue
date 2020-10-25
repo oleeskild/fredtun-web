@@ -159,6 +159,9 @@ export default {
   padding: 40px 70px;
   border-radius: 20px;
 }
+.modal-card-title{
+  padding-bottom: 10px;
+}
 @media (max-width: 1020px) {
    .tile-title {
   font-size: 26px;
