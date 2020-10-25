@@ -23,7 +23,7 @@
       <div @click="openModal = false" class="modal-background"></div>
        <div class="modal-content">
          <h2 class="modal-card-title">{{event? event.title : ''}}</h2>
-        <rich-content :blocks="event ? event.description : ''" />
+        <div> {{event ? event.description : ''}}</div>
       </div>
       <button @click="openModal = false" class="modal-close is-large" aria-label="close"></button>
     </div>
