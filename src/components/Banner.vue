@@ -22,7 +22,7 @@ export default {
   margin-left: 10px;
   margin-bottom: 15px;
   color: black;
-  border-bottom: solid 2px black;
-  font-weight: 500;
+  /* border-bottom: solid 2px black; */
+  font-weight: 600;
 }
 </style>

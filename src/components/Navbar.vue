@@ -1,8 +1,8 @@
 <template>
-  <!--nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-     <g-link to="/" class="navbar-item">
-        Hjem
+      <g-link to="/" class="navbar-item">
+        Fredtun Leirsted
       </g-link>
     <a role="button" class="navbar-burger burger" @click="navbarToggled = !navbarToggled" aria-label="menu" aria-expanded="false" :class="{'is-active': navbarToggled}" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
@@ -13,31 +13,33 @@
 
   <div id="navbarBasicExample" class="navbar-menu" :class="{'is-active': navbarToggled}">
     <div class="navbar-start">
-      
+      <g-link to="/blog" class="navbar-item">
+        Blogg 
+      </g-link>
 
       <g-link to="/events" class="navbar-item">
         Arrangementer
       </g-link>
 
-      <g-link to="/events" class="navbar-item">
+      <g-link to="/rent" class="navbar-item">
         Utleie &amp; Priser
       </g-link>
 
-      <g-link to="/events" class="navbar-item">
+      <g-link to="/about" class="navbar-item">
         Om Fredtun
       </g-link>
 
 
-      <g-link to="/events" class="navbar-item">
+      <g-link to="/contact" class="navbar-item">
         Kontakt Oss
       </g-link>
 
     </div>
 
   </div>
-  </nav-->
+  </nav>
 
-  <div class="tabs is-centered is-large is-fullwidth">
+  <!-- <div class="tabs is-centered is-large is-fullwidth">
     <ul>
       <li>
         <g-link to="/" class="navbar-item">Hjem</g-link>
@@ -58,7 +60,7 @@
         <g-link to="/contact" class="navbar-item">Kontakt Oss</g-link>
       </li>
     </ul>
-  </div>
+  </div> -->
 </template>
 <script>
 export default {
@@ -96,5 +98,18 @@ export default {
 }
 .navbar-item {
     color: black;
+}
+
+.navbar-item:hover {
+  background-color: white;
+  color: black;
+}
+
+.navbar {
+  background-color: rgb(92, 219, 149);
+}
+.navbar-brand {
+  font-size: 32px;
+  font-weight: 600;
 }
 </style>

@@ -4,7 +4,7 @@
       <div class="column is-two-fifths text-container">
         <div class="text">
           <div style="display: flex; align-items: center;">
-            <h1 class="title" style="color: black">Fredtun Leirsted</h1>
+            <h1 class="title" style="color:black;">Fredtun Leirsted</h1>
           </div>
           <p>
             Fredtun leirsted ligger et par km nord for Skudeneshavn på østsiden
@@ -93,7 +93,8 @@ p {
 }
 
 .title {
-    font-size: 72px
+    font-size: 72px;
+    font-weight: 600;
 }
 
 @media (max-width: 760px) {

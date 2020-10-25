@@ -21,15 +21,11 @@
 
     <div class="modal" :class="{'is-active': openModal}">
       <div @click="openModal = false" class="modal-background"></div>
-      <div class="modal-card">
-        <header class="modal-card-head">
-          <p class="modal-card-title">{{event? event.title : 'Tittel'}}</p>
-          <button @click="openModal = false" class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-          {{event ? event.description : ''}}
-        </section>
+       <div class="modal-content">
+         <h2 class="modal-card-title">{{event? event.title : ''}}</h2>
+        <rich-content :blocks="event ? event.description : ''" />
       </div>
+      <button @click="openModal = false" class="modal-close is-large" aria-label="close"></button>
     </div>
   </div>
 </template>
@@ -129,5 +125,11 @@ export default {
   padding-bottom: 10px;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 40px 70px;
+  border-radius: 20px;
 }
 </style>

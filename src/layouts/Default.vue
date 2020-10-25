@@ -1,6 +1,5 @@
 <template>
   <div>
-    <banner />
     <navbar />
     <slot/>
   </div>
