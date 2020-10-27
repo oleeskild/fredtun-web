@@ -36,12 +36,12 @@
     </div>
 
     <div class="modal" :class="{'is-active': openModal}">
-      <div @click="openModal = false" class="modal-background"></div>
+      <div @click="openModal = false; selectNode({});" class="modal-background"></div>
       <div class="modal-content">
          <h2 class="modal-card-title">{{selectedNode.name}}</h2>
         <rich-content :blocks="selectedNode._rawDescription || []" />
       </div>
-      <button @click="openModal = false" class="modal-close is-large" aria-label="close"></button>
+      <button @click="openModal = false; selectNode({});" class="modal-close is-large" aria-label="close"></button>
     </div>
   </Layout>
 </template>
