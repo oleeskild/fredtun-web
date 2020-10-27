@@ -1,5 +1,5 @@
 <template>
-    <g-image :src="urlFor()" />
+    <g-image style="width:100%" :src="urlFor()" />
 </template>
 <script>
 import imageUrlBuilder from '@sanity/image-url';
