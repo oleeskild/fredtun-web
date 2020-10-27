@@ -20,7 +20,7 @@ export default {
     },
     methods:{
         urlFor(){
-            return builder.image(this.$props).quality(30).url();
+            return builder.image(this.$props).quality(80).width(600).url();
         }
     }
 }
