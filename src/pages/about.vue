@@ -46,10 +46,9 @@ export default {
     align-items: center;
     padding: 0px 20px 20px 20px;
 }
-</style>
-<style scoped>
 h3 {
     text-align: center;
     font-weight: 500;
 }
 </style>
+
