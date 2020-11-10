@@ -75,7 +75,8 @@ export default {
 </script>
 <style scoped>
 .columns {
-  margin: 20px;
+  margin: auto;
+  max-width: 1200px;
 }
 .content{
   padding-left:0;
