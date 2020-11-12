@@ -2,19 +2,19 @@
 <div class="nav">
     <div class="columns">
         <div class="column ">
-            <nav-item :link="'/blog'" :title="'BLOGG'" />
+            <nav-item :link="'/blogg'" :title="'BLOGG'" />
         </div>
         <div class="column ">
-            <nav-item :link="'/events'" :title="'ARRANGEMENTER'" />
+            <nav-item :link="'/arrangementer'" :title="'ARRANGEMENTER'" />
         </div>
         <div class="column ">
-            <nav-item :link="'/rent'" :title="'UTLEIE &amp; PRISER'" />
+            <nav-item :link="'/leie'" :title="'UTLEIE &amp; PRISER'" />
         </div>
         <div class="column ">
-            <nav-item :link="'/about'" :title="'OM FREDTUN'" />
+            <nav-item :link="'/om-oss'" :title="'OM FREDTUN'" />
         </div>
         <div class="column">
-            <nav-item :link="'/contact'" :title="'KONTAKT OSS'" />
+            <nav-item :link="'/kontakt'" :title="'KONTAKT OSS'" />
         </div>
     </div>
 </div>

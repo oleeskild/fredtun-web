@@ -13,24 +13,24 @@
 
   <div id="navbarBasicExample" class="navbar-menu" :class="{'is-active': navbarToggled}">
     <div class="navbar-start">
-      <g-link to="/blog" class="navbar-item">
+      <g-link to="/blogg" class="navbar-item">
         Blogg 
       </g-link>
 
-      <g-link to="/events" class="navbar-item">
+      <g-link to="/arrangementer" class="navbar-item">
         Arrangementer
       </g-link>
 
-      <g-link to="/rent" class="navbar-item">
+      <g-link to="/leie" class="navbar-item">
         Utleie &amp; Priser
       </g-link>
 
-      <g-link to="/about" class="navbar-item">
+      <g-link to="/om-oss" class="navbar-item">
         Om Fredtun
       </g-link>
 
 
-      <g-link to="/contact" class="navbar-item">
+      <g-link to="/kontakt" class="navbar-item">
         Kontakt Oss
       </g-link>
 
