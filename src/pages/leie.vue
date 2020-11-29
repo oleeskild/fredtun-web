@@ -97,7 +97,6 @@ export default {
     selectNode(node){
       this.selectedNode = {};
       this.selectedNode = node;
-      this.openModal = true;
     }
   }
 };
