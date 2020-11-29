@@ -13,12 +13,12 @@
                   <p class="tile-subtitle">Minstepris:</p>
                   <p>{{node.minPrice}},- {{node.minPriceDenomination}}</p>
                   <p>{{node.minPriceAlternative}},- {{node.minPriceAlternativeDenomination}}</p>
-                  <span @click="selectedNode = node; openModal = true" class="more-info">Mer Info</span>
+                  <span @click="selectNode(node); openModal = true" class="more-info">Mer Info</span>
                 </article>
               </div>
               <div class="tile" v-for="index in smallRentUnits.length/2" :key="index">
-                <rent-tile @moreInfo="openModal = true" @moreInfoClicked="selectNode($event)" :rentUnit="smallRentUnits[(index-1)*2].node"/>
-                <rent-tile @moreInfo="openModal = true" @moreInfoClicked="selectNode($event)" :rentUnit="smallRentUnits[((index-1)*2)+1].node"/>
+                <rent-tile @moreInfoClicked="selectNode($event); openModal = true" :rentUnit="smallRentUnits[(index-1)*2].node"/>
+                <rent-tile @moreInfoClicked="selectNode($event); openModal = true" :rentUnit="smallRentUnits[((index-1)*2)+1].node"/>
               </div>
             </div>
           </div>

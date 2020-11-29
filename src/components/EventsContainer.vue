@@ -3,7 +3,7 @@
         <div class="wrap">
             <h2 class="event-title">Kommende Arrangement</h2>
             <event :key="edge.node.id" v-for="edge in $static.events.edges" :event="edge.node" />
-            <g-link to="/events" class="button is-large is-dark">SE ALLE ARRANGEMENTER</g-link>
+            <g-link to="/arrangementer" class="button is-large is-dark">SE ALLE ARRANGEMENTER</g-link>
         </div>
     </div>
 </template>

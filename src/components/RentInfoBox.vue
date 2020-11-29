@@ -15,7 +15,7 @@
                         <li>- 7 bad</li>
                         <li>- 2 fotballbaner</li>
                     </ul>
-                    <g-link to="/rent" class="button is-medium is-dark">SE MER INFO OG PRISER</g-link>
+                    <g-link to="/leie" class="button is-medium is-dark">SE MER INFO OG PRISER</g-link>
                 </div>
             </div>
         </div>
@@ -49,6 +49,7 @@ h2{
 h3{
     font-size: 36px;
     font-weight: 700;
+    text-align: start;
 }
 .button {
     margin: 20px 0;
