@@ -33,7 +33,8 @@ export default {
     display: flex;
     justify-content: center;
 }
-.columns {
-    width: 100%;
+
+.column{
+    padding: 2rem;
 }
 </style>

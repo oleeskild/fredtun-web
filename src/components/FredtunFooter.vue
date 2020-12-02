@@ -57,6 +57,7 @@ export default {
 .column {
   display: flex;
   justify-content: flex-end;
+  padding-left: 30px;
 }
 .contact-form {
   position: relative;
@@ -142,11 +143,26 @@ export default {
    } 
 }
 
-@media (max-width: 1100px){
+@media (max-width: 1400px){
+  .address {
+    display: none;
+  }
+  .column {
+    justify-content: flex-start;
+  }
+  .lightgreen{
+    display:none;
+  }
 
-   .curve{
-       display: none;
-   } 
+}
+
+@media (max-width: 1000px){
+  .curve {
+    display: none;
+  }
+}
+
+@media (max-width: 1100px){
     .lightgreen {
         width: 100%;
     }

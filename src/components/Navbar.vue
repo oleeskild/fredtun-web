@@ -58,15 +58,23 @@ export default {
 }
 .navbar-item {
     color: black;
+    padding: 5px 25px;
 }
 
+.navbar-start > .navbar-item {
+  font-size: 20px;
+}
+
+
 .navbar-item:hover {
-  background-color: white;
+  /* background-color: white; */
   color: black;
+  background-color: rgba(0,0,0,0.1);
 }
 
 .navbar {
   background-color: rgb(92, 219, 149);
+  min-height: 7rem;
 }
 .navbar-brand {
   font-size: 32px;
