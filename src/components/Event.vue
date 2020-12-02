@@ -53,7 +53,7 @@ export default {
   props: ['event'],
   computed: {
     eventDate: function(){
-      return this.event ? new Date(this.event.date) : new Date();
+      return this.event && this.event.date ? new Date(this.event.date) : new Date();
     },
     day: function(){
       return this.eventDate.getDate();

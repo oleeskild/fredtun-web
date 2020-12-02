@@ -2,14 +2,19 @@
     <div class="events-container">
         <div class="wrap">
             <h2 class="event-title">Kommende Arrangement</h2>
-            <event :key="edge.node.id" v-for="edge in $static.events.edges" :event="edge.node" />
+            <div v-if="topEvents.length">
+            <event  :key="edge.node.id" v-for="edge in topEvents" :event="edge.node" />
+            </div>
+            <div v-else>
+                <no-event />
+            </div>
             <g-link to="/arrangementer" class="button is-large is-dark">SE ALLE ARRANGEMENTER</g-link>
         </div>
     </div>
 </template>
 <static-query>
 query Events {
-  events: allSanityEvent(sortBy: "date", order: ASC, perPage: 2, page:1){
+  events: allSanityEvent(sortBy: "date", order: ASC, perPage: 10, page:1){
     edges{
       node {
         title
@@ -22,9 +27,31 @@ query Events {
 </static-query>
 <script>
 import Event from '~/components/Event.vue';
+import NoEvent from '~/components/NoEvent.vue';
 export default {
+    data(){
+        return {
+        }
+    },
    components: {
-       Event
+       Event,
+       NoEvent
+   },
+   computed: {
+       allFutureEvents(){
+            var date = new Date();
+            date.setDate(date.getDate() -1);
+
+            let eventsAfterToday = this.$static.events.edges.filter(e=> e.node.date > date.toISOString());
+            return eventsAfterToday;
+        },
+        topEvents(){
+            let all = this.allFutureEvents;
+            if(all.length >= 0 && all.length <=2){
+                return all;
+            }
+            return [all[0], all[1]]
+        }
    } 
 }
 </script>
