@@ -3,23 +3,35 @@
     <div class="columns">
       <div class="column contact-form">
         <div class="lightgreen"></div>
-        
-        <div style="display:flex; flex-direction: column; align-items: center">
-        <h2 class="subtitle">Ta kontakt</h2>
-        <div style="margin:0 10px;">
-        <contact-form />
+        <div style="display: flex; flex-direction: column; z-index: 10; margin-right: 150px">
+          <h2 class="subtitle">Fredtun Leirsted</h2>
+          <div class="footer-link-container">
+            <g-link class="footer-link" to="/kontakt">Kontakt Oss</g-link>
+          </div>
+          <div class="footer-link-container">
+            <g-link class="footer-link" to="/">Hjem</g-link>
+          </div>
+          <div class="footer-link-container">
+            <g-link class="footer-link" to="/leie">Utleie</g-link>
+          </div>
+          <div class="footer-link-container">
+            <g-link class="footer-link" to="/om-oss">Om Fredtun</g-link>
+          </div>
+           <div class="footer-link-container">
+            <g-link class="footer-link" to="/blogg">Blogg</g-link>
+          </div>
+          <div style="z-index:10; margin-top: auto; color: black">© 2020 Fredtun </div>
         </div>
-        </div>
+          
 
         <Bezier :color="'#8ee4af'" class="curve" />
       </div>
       <div class="column address">
         <div>
-          <h2 class="subtitle">Besøksadresse</h2>
+          <h2 class="subtitle address-title">Besøksadresse</h2>
           <div class="text">Austre Karmøyveg 820, Karmøy</div>
           <Map />
         </div>
-          <div style="align-self:flex-end">© 2020 Fredtun </div>
       </div>
     </div>
   </div>
@@ -44,16 +56,20 @@ export default {
 }
 .column {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .contact-form {
   position: relative;
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;
+ 
 }
 .address {
   background-color: #389583;
+  justify-content: flex-start;
+  margin-left: 250px;
+}
+
+.address-title{
+  margin-bottom: 0 !important;
 }
 .curve {
   position: absolute;
@@ -83,7 +99,8 @@ export default {
 }
 .text {
   font-size: 24px;
-  padding-left: 10px;
+  color:white;
+  padding-bottom: 10px;
 }
 .form{
     position: relative;
@@ -101,6 +118,22 @@ export default {
 }
 .is-link:hover {
     background-color: rgba(5, 56, 106, 1);
+}
+
+.footer-link {
+  color: white;
+  font-size: 24px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.footer-link-container {
+  margin-bottom: 10px;
+}
+
+
+.footer-link:hover {
+  background-color: rgba(0,0,0,0.1);
 }
 
 @media (max-width: 600px){

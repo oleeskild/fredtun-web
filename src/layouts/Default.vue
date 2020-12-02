@@ -1,16 +1,23 @@
 <template>
   <div>
     <navbar />
+    <div style="min-height: 90vh">
     <slot/>
+    </div>
+    <div style="margin-top: 50px">
+      <fredtun-footer />
+    </div>
   </div>
 </template>
 <script>
 import Navbar from '~/components/Navbar.vue';
 import Banner from '~/components/Banner.vue';
+import FredtunFooter from '~/components/FredtunFooter.vue';
 export default {
  components: {
    Navbar,
-    Banner 
+   Banner,
+   FredtunFooter
  },
  layout: 'blank' 
 }
