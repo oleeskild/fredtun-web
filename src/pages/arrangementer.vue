@@ -3,9 +3,14 @@
     <page-header :title="'Arrangementer'" :subtitle="`Fra og med ${niceDate}`" />
     <div class="columns wrap">
       <div class="column">
-        <event @selected="selectEvent(edge.node)" :key="edge.node.id" v-for="edge in allEvents" :event="edge.node" />
+        <div v-if="allEvents.length">
+          <event @selected="selectEvent(edge.node)" :key="edge.node.id" v-for="edge in allEvents" :event="edge.node" />
+        </div>
+        <div v-else>
+            <no-event />
+        </div>
       </div>
-      <div class="column is-one-third calendar">
+      <!-- <div class="column is-one-third calendar"> -->
         <!--input
           type="date"
           ref="calendarTrigger"
@@ -13,7 +18,7 @@
           data-today-label="Idag"
           data-show-clear-button="false"
         /-->
-      </div>
+      <!-- </div> -->
     </div>
   </Layout>
 </template>
@@ -33,6 +38,7 @@ query Events {
 </page-query>
 <script>
 import Event from "~/components/Event.vue";
+import NoEvent from '~/components/NoEvent.vue';
 import PageHeader from "~/components/PageHeader.vue";
 import "bulma-calendar/dist/css/bulma-calendar.min.css";
 //import bulmaCalendar from 'bulma-calendar/dist/js/bulma-calendar.min.js';
@@ -40,9 +46,10 @@ export default {
   metaInfo: { title: "Arrangementer" },
   components: {
     Event,
+    NoEvent,
     PageHeader
   },
-  data() {
+    data() {
     return {
       date: new Date(),
       selectedEvent: {}
@@ -79,7 +86,9 @@ export default {
 </script>
 <style scoped>
 .columns {
-  margin: 10px;
+  padding: 10px;
+  max-width: 1200px;
+  margin: auto;
 }
 @media (max-width: 770px){
     .calendar {

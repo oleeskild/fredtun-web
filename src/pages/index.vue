@@ -1,7 +1,9 @@
 <template>
 <div>
   <hero/>
-  <navigation />
+  <div style="display: flex; justify-content: center;">
+    <navigation />
+  </div>
   <events-container />
   <div style="margin: 100px 0; display: flex; justify-content: center;">
     <rent-info-box  />
