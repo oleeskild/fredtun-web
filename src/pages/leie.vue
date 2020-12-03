@@ -13,7 +13,7 @@
                   <p class="tile-subtitle">Minstepris:</p>
                   <p>{{node.minPrice}},- {{node.minPriceDenomination}}</p>
                   <p>{{node.minPriceAlternative}},- {{node.minPriceAlternativeDenomination}}</p>
-                  <span @click="selectNode(node); openModal = true" class="more-info">Mer Info</span>
+                  <!-- <span @click="selectNode(node); openModal = true" class="more-info">Mer Info</span> -->
                 </article>
               </div>
               <div class="tile" v-for="index in smallRentUnits.length/2" :key="index">
@@ -35,19 +35,20 @@
       </div>
     </div>
 
+    <h2 class="building-title">Om bygningene</h2>
     <div v-for="{node} in allUnits" :key="node.id" class="unit-summary">
-      <h2 class="summary-title">{{node.name}}</h2>
+      <h3 class="summary-title">{{node.name}}</h3>
       <rich-content-row :blocks="node._rawDescription || []" />
     </div>
 
-    <div class="modal" :class="{'is-active': openModal}">
+    <!-- <div class="modal" :class="{'is-active': openModal}">
       <div @click="openModal = false; selectNode({});" class="modal-background"></div>
       <div class="modal-content">
          <h2 class="modal-card-title">{{selectedNode.name}}</h2>
         <rich-content :blocks="selectedNode._rawDescription || []" />
       </div>
       <button @click="openModal = false; selectNode({});" class="modal-close is-large" aria-label="close"></button>
-    </div>
+    </div> -->
   </Layout>
 </template>
 <page-query>
@@ -176,6 +177,18 @@ export default {
     font-size: 2rem;
     line-height: 1;
 }
+
+.building-title {
+    color: #363636;
+    flex-grow: 1;
+    flex-shrink: 0;
+    font-size: 3rem;
+    line-height: 1;
+    margin:auto;
+    text-align:center;
+    padding-bottom: 40px;
+}
+
 .unit-summary {
   max-width: 900px; 
   margin:auto; 
@@ -186,7 +199,7 @@ export default {
   background-color:white;
 }
 .unit-summary:nth-child(2n+1) {
-  border: #5bdb955c 4px solid
+  border: #5bdb955c 6px solid
 }
 
 @media (max-width: 1020px) {
@@ -198,6 +211,10 @@ export default {
    .tile-title {
   font-size: 20px;
 } 
+  .unit-summary {
+    margin:10px; 
+    padding: 15px
+  }
 }
 @media (max-width: 770px) {
    .tile-title {

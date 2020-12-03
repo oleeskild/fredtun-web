@@ -25,6 +25,14 @@ export default {
 <style scoped>
 .content-row > div{
     display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+@media (max-width: 900px) {
+    .content-row > div{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .content-row > div > p{

@@ -6,7 +6,7 @@
       <p v-if="rentUnit.minPrice" class="tile-subtitle">Minstepris:</p>
       <p v-if="rentUnit.minPrice">{{rentUnit.minPrice}},- {{rentUnit.minPriceDenmonination}}</p>
       <p v-if="rentUnit.minPriceAlternative">{{rentUnit.minPriceAlternative}},- {{rentUnit.minPriceAlternativeDenomination}}</p>
-      <span @click="moreInfoClicked()" class="more-info">Mer Info</span>
+      <!-- <span @click="moreInfoClicked()" class="more-info">Mer Info</span> -->
     </article>
   </div>
 </template>
