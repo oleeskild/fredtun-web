@@ -35,6 +35,11 @@
       </div>
     </div>
 
+    <div v-for="{node} in allUnits" :key="node.id" class="unit-summary">
+      <h2 class="summary-title">{{node.name}}</h2>
+      <rich-content-row :blocks="node._rawDescription || []" />
+    </div>
+
     <div class="modal" :class="{'is-active': openModal}">
       <div @click="openModal = false; selectNode({});" class="modal-background"></div>
       <div class="modal-content">
@@ -86,6 +91,9 @@ export default {
     };
   },
   computed: {
+    allUnits:function(){
+      return this.$page.units.edges;
+    },
     smallRentUnits: function(){
       return this.$page.units.edges.filter(x=> !x.node.isprimary);
     },
@@ -161,6 +169,26 @@ export default {
 .modal-card-title{
   padding-bottom: 10px;
 }
+.summary-title {
+    color: #363636;
+    flex-grow: 1;
+    flex-shrink: 0;
+    font-size: 2rem;
+    line-height: 1;
+}
+.unit-summary {
+  max-width: 900px; 
+  margin:auto; 
+  padding: 20px
+}
+
+.unit-summary:nth-child(2n) {
+  background-color:white;
+}
+.unit-summary:nth-child(2n+1) {
+  border: #5bdb955c 4px solid
+}
+
 @media (max-width: 1020px) {
    .tile-title {
   font-size: 26px;

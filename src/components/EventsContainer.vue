@@ -2,7 +2,7 @@
     <div class="events-container">
         <div class="wrap">
             <h2 class="event-title">Kommende Arrangement</h2>
-            <event :key="edge.node.id" v-for="edge in $static.events.edges" :event="edge.node" />
+            <event :key="edge.node.id" v-for="edge in upcomingEvents" :event="edge.node" />
             <g-link to="/arrangementer" class="button is-large is-dark">SE ALLE ARRANGEMENTER</g-link>
         </div>
     </div>
@@ -25,7 +25,15 @@ import Event from '~/components/Event.vue';
 export default {
    components: {
        Event
-   } 
+   },
+   computed: {
+       upcomingEvents: function(){
+           var date = new Date();
+            date.setDate(date.getDate() -1);
+
+            return this.$$static.events.edges.filter(e=> e.node.date > date.toISOString())
+       }
+   }
 }
 </script>
 <style scoped>
