@@ -78,6 +78,7 @@ export default {
 }
 .navbar-brand {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: Prociono, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 </style>
