@@ -120,7 +120,9 @@ export default {
     width: 100%;
 }
 .columns {
-  margin: 30px 20px;
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 50px;
 }
 .tile >p {
   text-align: center;
