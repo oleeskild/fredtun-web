@@ -176,6 +176,7 @@ export default {
     flex-shrink: 0;
     font-size: 2rem;
     line-height: 1;
+    padding-bottom: 10px;
 }
 
 .building-title {
