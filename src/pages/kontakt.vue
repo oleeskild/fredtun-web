@@ -104,6 +104,7 @@ export default {
 .card {
   width: 100%;
   height: 100%;
+  border: #5bdb955c 6px solid
 }
 
 .card-content {
