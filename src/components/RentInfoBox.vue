@@ -9,11 +9,13 @@
                     <h2>Leie?</h2>
                     <h3>På Fredtun har vi...</h3>
                     <ul>
-                        <li>- 120 sengeplasser</li>
-                        <li>- 10 soverom</li>
-                        <li>- 2 fellesrom</li>
-                        <li>- 7 bad</li>
-                        <li>- 2 fotballbaner</li>
+                        <li>- 70 sengeplasser</li>
+                        <li>- 14 soverom</li>
+                        <li>- 7 dusjfasiliteter</li>
+                        <li>- 1 fotballbane</li>
+                        <li>- 1 volleyballbane</li>
+                        <li>- 1 lekeplass</li>
+                        <li>- Kaniner og høner i sommerhalvåret</li>
                     </ul>
                     <g-link to="/leie" class="button is-medium is-dark">SE MER INFO OG PRISER</g-link>
                 </div>
