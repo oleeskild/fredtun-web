@@ -4,10 +4,10 @@
       <div class="column is-two-fifths text-container">
         <div class="text">
           <div style="display: flex; align-items: center;">
-            <h1 class="title" style="color:black;">Fredtun Leirsted</h1>
+            <h1 class="title" style="color:black;">Fredtun</h1>
           </div>
           <p>
-            Fredtun leirsted ligger et par km nord for Skudeneshavn på østsiden
+            Fredtun ligger et par km nord for Skudeneshavn på østsiden
             av Karmøy. Stedet er omkranset av fjell og vender mot sjøen ved
             sør-enden av Karmsundet. Man kommer inn på området gjennom et
             naturlig smalt pass mellom de to fjellrggene som strekker seg ned
