@@ -2,7 +2,7 @@
   <div class="banner">
     <g-link to="/">
       <div style="display: flex; align-items: center">
-        <h2 class="subtitle">Fredtun Leirsted</h2>
+        <h2 class="subtitle">Fredtun</h2>
       </div>
     </g-link>
   </div>
