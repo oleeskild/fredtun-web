@@ -1,13 +1,10 @@
 <template>
   <Layout>
-    <page-header :title="'Blogg'" />
+    <page-header :title="'Fredtun blogg'" />
     <div class="posts">
-      <div class="post" v-for="edge in $page.posts.edges" :key="edge.node.id">
-        <h2 class="title">{{edge.node.title}}</h2>
-        <div class="date">{{niceDate(edge.node._createdAt)}}</div>
-        <g-image class="post-image" :src="`${edge.node.cover.asset.url}`" />
-        <rich-content :blocks="edge.node._rawBody" />
-      </div>
+      <div class="divider"></div>
+        <blog-post v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
+      <div class="divider"></div>
     </div>
   </Layout>
 </template>
@@ -18,6 +15,7 @@ query Posts {
       node {
         _createdAt
         id
+        path
         title
         cover{
           asset {
@@ -32,12 +30,14 @@ query Posts {
 </page-query>
 <script>
 import PageHeader from "~/components/PageHeader.vue";
+import BlogPost from "~/components/BlogPost.vue";
 //import axios from "~/plugins/axios";
 //import marked from "marked";
 export default {
   metaInfo: { title: "Blogg" },
   components: {
-    PageHeader
+    PageHeader,
+    BlogPost
   },
   data() {
     return {
@@ -65,34 +65,12 @@ export default {
   flex-direction: column;
   align-items: center;
 }
-.post {
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 80%;
-  max-width: 900px;
-}
-.post > p {
-  align-self: flex-start;
-}
-.post-image {
-  max-width: 900px;
+.divider {
   width: 100%;
-  margin: 20px 0;
+  max-width: 750px;
+  margin: 10px 0;
+  height: 2px;
+  background-color: rgba(0,0,0,0.5);
 }
-.date {
-  color: rgba(0, 0, 0, 0.4);
-}
-.title {
-  text-align: center;
-}
-@media (max-width: 800px) {
-  .title {
-    font-size: 48px;
-  }
-  .subtitle {
-    font-size: 38px;
-  }
-}
+
 </style>

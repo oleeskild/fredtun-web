@@ -13,5 +13,8 @@ module.exports = {
       dataset: 'fredtun',
 
     }
-  }]
+  }],
+  templates: {
+    SanityBlogpost: '/blog/:title/:id'
+  }
 }
