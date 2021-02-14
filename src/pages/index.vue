@@ -4,6 +4,7 @@
   <div style="display: flex; justify-content: center;">
     <navigation />
   </div>
+  <last-blog-post />
   <events-container />
   <div style="margin: 100px 0; display: flex; justify-content: center;">
     <rent-info-box  />
@@ -15,6 +16,7 @@
 <script>
 import Hero from '~/components/Hero.vue'
 import Navigation from '~/components/Navigation.vue'
+import LastBlogPost from '~/components/LastBlogPost.vue'
 import EventsContainer from '~/components/EventsContainer.vue'
 import RentInfoBox from '~/components/RentInfoBox.vue'
 import FredtunFooter from '~/components/FredtunFooter.vue'
@@ -26,7 +28,8 @@ export default {
     Navigation,
     EventsContainer,
     RentInfoBox,
-    FredtunFooter
+    FredtunFooter,
+    LastBlogPost
   },
   layout: 'blank'
 }
