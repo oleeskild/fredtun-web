@@ -54,7 +54,7 @@ export default {
 .cover-image{
     min-height: 200px;
     width: 20%;
-    background-size: cover import !important;
+    background-size: cover !important;
     background-repeat: no-repeat;
 }
 .blog-info{
