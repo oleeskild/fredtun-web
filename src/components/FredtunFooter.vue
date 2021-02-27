@@ -92,6 +92,7 @@ export default {
 }
 .vipps>h3{
   font-size: 36px;
+  text-align: start;
 }
 .copyright {
   grid-area: footer;
@@ -201,6 +202,9 @@ export default {
     margin: auto;
   }
 }
+
+
+
 
 @media (max-width: 1400px){
   .address {
