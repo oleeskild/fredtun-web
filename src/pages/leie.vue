@@ -12,7 +12,7 @@
                   <p>{{node.price}},- {{node.priceDenomination}}</p>
                   <p class="tile-subtitle">Minstepris:</p>
                   <p>{{node.minPrice}},- {{node.minPriceDenomination}}</p>
-                  <p>{{node.minPriceAlternative}},- {{node.minPriceAlternativeDenomination}}</p>
+                  <p v-if="node.minPriceAlternative && node.minPriceAlternative.trim()">{{node.minPriceAlternative}},- {{node.minPriceAlternativeDenomination}}</p>
                   <!-- <span @click="selectNode(node); openModal = true" class="more-info">Mer Info</span> -->
                 </article>
               </div>
