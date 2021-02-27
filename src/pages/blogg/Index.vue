@@ -2,9 +2,9 @@
   <Layout>
     <page-header :title="'Fredtun blogg'" />
     <div class="posts">
-      <div class="divider"></div>
-        <blog-post v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
-      <div class="divider"></div>
+      <div class="divider" v-for="edge in $page.posts.edges" :key="edge.node.id">
+        <blog-post :post="edge.node"/>
+      </div>
     </div>
   </Layout>
 </template>
@@ -66,11 +66,9 @@ export default {
   align-items: center;
 }
 .divider {
-  width: 100%;
-  max-width: 750px;
-  margin: 10px 0;
-  height: 2px;
-  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px rgba(0,0,0,0.7) solid;
 }
 
 </style>
