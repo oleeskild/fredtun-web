@@ -4,7 +4,7 @@
       <div class="column contact-form">
         <div class="lightgreen"></div>
         <div class="footer-container">
-          <h2 class="footer-header subtitle">Fredtun Leirsted</h2>
+          <h2 class="footer-header subtitle"> <img style="height: 75px; margin-right: 12px" src="/logofred.png" /> Fredtun</h2>
           <div class="footer-links">
             <div class="footer-link-container">
               <g-link class="footer-link" to="/kontakt">Kontakt Oss</g-link>
@@ -23,7 +23,7 @@
             </div>
           </div>
           <div class="vipps">
-            <div>Støtte Fredtun?</div>
+            <h3>Støtte Fredtun?</h3>
             <img src="/vipps-logo.png" />
             <h3>Vipps: 123321</h3>
             <h4>Kontonummer: 12345.12.12345 </h4>
@@ -73,6 +73,9 @@ export default {
 
 .footer-header{
   grid-area: header;
+  font-family: Prociono, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 .footer-links {
@@ -83,8 +86,8 @@ export default {
 .vipps{
   grid-area: vipps;
   font-size: 24px;
-  max-width: 350px;
-  color:black;
+  max-width: 400px;
+  color:white;
   margin: 10px 0 25px 5px;
   padding: 10px;
   text-align:start;

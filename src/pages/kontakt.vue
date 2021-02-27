@@ -49,7 +49,7 @@
           <div class="card-content" style="text-align:center;">
         <h2 class="subtitle">Postadresse</h2>
         <ul>
-          <li>Fredtun Leirsted</li>
+          <li>Fredtun</li>
           <li>Postboks 23</li>
           <li>4297 Skudeneshavn</li>
         </ul>

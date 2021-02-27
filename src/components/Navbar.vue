@@ -2,7 +2,7 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
       <g-link to="/" class="navbar-item">
-        Fredtun Leirsted
+        <img style="margin-right: 5px" src="/logofred.png" />  Fredtun
       </g-link>
     <a role="button" class="navbar-burger burger" @click="navbarToggled = !navbarToggled" aria-label="menu" aria-expanded="false" :class="{'is-active': navbarToggled}" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
