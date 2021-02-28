@@ -25,8 +25,8 @@
           <div class="vipps">
             <h3>Støtte Fredtun?</h3>
             <img src="/vipps-logo.png" />
-            <h3>Vipps: 123321</h3>
-            <h4>Kontonummer: 12345.12.12345 </h4>
+            <h3>Vipps: 565166</h3>
+            <h4>Kontonummer: 3361.23.85160 </h4>
           </div>
           <div class="copyright" style="z-index:10; margin-top: auto; color: black">© 2021 Fredtun </div>
         </div>
