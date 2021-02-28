@@ -9,8 +9,8 @@
           <p>
             Fredtun ligger et par km nord for Skudeneshavn på østsiden
             av Karmøy. Stedet er omkranset av fjell og vender mot sjøen ved
-            sør-enden av Karmsundet. Man kommer inn på området gjennom et
-            naturlig smalt pass mellom de to fjellrggene som strekker seg ned
+            sørenden av Karmsundet. Du kommer inn på området gjennom et
+            naturlig smalt pass mellom de to fjellryggene som strekker seg ned
             mot sjøen på hver side av området. Innenfor er det opparbeidet med
             fotballbane, lekeplass, plener og grusveier mellom bygningene.
           </p>
