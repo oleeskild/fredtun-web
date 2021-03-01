@@ -148,7 +148,7 @@ export default {
   font-weight: 700;
   margin-bottom: 0;
   margin-top: 25px;
-  padding:0;
+  padding: 10px 0;
 }
 .text {
   font-size: 24px;
