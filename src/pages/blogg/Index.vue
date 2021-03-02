@@ -69,7 +69,7 @@ export default {
   display: flex;
   justify-content: center;
   border-bottom: 2px rgba(0,0,0,0.4) solid;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 </style>
