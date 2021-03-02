@@ -8,3 +8,8 @@
     to = "http://fredtun.org/:splat"
     status = 301
     force = true
+[[redirects]
+    from = "https://fredtun.netlify.app/*"
+    to = "https://fredtun.org/:splat"
+    status = 301
+    force = true
