@@ -13,3 +13,8 @@
     to = "https://fredtun.org/:splat"
     status = 301
     force = true
+    
+[[redirects]]
+    from = "/blog/*"
+    to = "/blogg/:splat"
+    status = 301
