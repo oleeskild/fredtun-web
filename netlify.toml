@@ -1,4 +1,8 @@
 [[redirects]]
-    from = "https://fredtunleirsted.no"
-    to = "https://fredtun.org"
+    from = "https://fredtunleirsted.no/*"
+    to = "https://fredtun.org/:splat"
+    status = 301
+[[redirects]]
+    from = "http://fredtunleirsted.no/*"
+    to = "http://fredtun.org/:splat"
     status = 301
