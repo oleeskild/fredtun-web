@@ -2,7 +2,9 @@
     from = "https://fredtunleirsted.no/*"
     to = "https://fredtun.org/:splat"
     status = 301
+    force = true
 [[redirects]]
     from = "http://fredtunleirsted.no/*"
     to = "http://fredtun.org/:splat"
     status = 301
+    force = true
