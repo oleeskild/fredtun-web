@@ -68,7 +68,8 @@ export default {
 .divider {
   display: flex;
   justify-content: center;
-  border-bottom: 2px rgba(0,0,0,0.7) solid;
+  border-bottom: 2px rgba(0,0,0,0.4) solid;
+  padding: 10px 0;
 }
 
 </style>
