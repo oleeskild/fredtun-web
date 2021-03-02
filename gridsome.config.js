@@ -15,6 +15,6 @@ module.exports = {
     }
   }],
   templates: {
-    SanityBlogpost: '/blog/:title/:id'
+    SanityBlogpost: '/blogg/:title/:id'
   }
 }
