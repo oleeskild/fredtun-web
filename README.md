@@ -1,5 +1,5 @@
 # Fredtun
-This is the code for the camp site [Fredtun](https://vigorous-einstein-bc6b6c.netlify.app/). It uses Gridsome in the frontend,
+This is the code for the camp site [Fredtun](https://fredtun.org). It uses Gridsome in the frontend,
 which fetches the content from sanity.io using graphql. 
  
 ## Build
