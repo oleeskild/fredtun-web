@@ -19,7 +19,7 @@
     to = "/blogg/:splat"
     status = 301
     
-[[redirect]]
+[[redirects]]
     from = "/utleie/*"
     to = "/leie/:splat"
     status = 301
