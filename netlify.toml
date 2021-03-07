@@ -20,6 +20,6 @@
     status = 301
     
 [[redirect]]
-    from = "/utleie"
-    to = "/leie"
+    from = "/utleie/*"
+    to = "/leie/:splat"
     status = 301
