@@ -22,11 +22,10 @@
               <g-link class="footer-link" to="/blogg">Blogg</g-link>
             </div>
           </div>
-          <div class="vipps">
-            <h3>Støtte Fredtun?</h3>
-            <img src="/vipps-logo.png" />
-            <h3>Vipps: 565166</h3>
-            <h4>Kontonummer: 3361.23.85160 </h4>
+          <div class="support">
+            <div>Ønsker du å støtte Fredtun? </div>
+            <h3 class="vipps">Vipps: 565166</h3>
+            <h3 class="account">Kontonummer: 3361.23.85160 </h3>
           </div>
           <div class="copyright" style="z-index:10; margin-top: auto; color: black">© 2021 Fredtun </div>
         </div>
@@ -83,20 +82,35 @@ export default {
   flex-direction: column; 
   grid-area: links;
 }
-.vipps{
+.support{
   grid-area: vipps;
   font-size: 24px;
-  max-width: 400px;
+  max-width: 500px;
   color:white;
-  margin: 10px 0 25px 5px;
+  margin: 10px 0 25px 0;
   padding: 10px;
   text-align:start;
-  border-left: 6px solid #389583;
+  /* border-bottom: 6px solid #389583; */
+  /* border-top: 6px solid #389583; */
+  /* border-left: 6px solid #389583; */
+  background-color: rgba(56, 149, 131, 0.3);
+  
+ 
 }
-.vipps>h3{
-  font-size: 36px;
+.support>h3{
+  font-size: 32px;
   text-align: start;
 }
+
+.support>.vipps{
+  font-weight: 600;
+}
+
+.support>.account{
+  font-weight: 600;
+}
+
+
 .copyright {
   grid-area: footer;
 }
