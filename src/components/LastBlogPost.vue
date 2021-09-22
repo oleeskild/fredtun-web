@@ -1,12 +1,14 @@
 <template>
-    <div class="last-blog-post">
-        <div class="column is-one-third cover-image" :style="`background-size: cover; background: url(${post.cover.asset.url})`"></div>
-    
-        <div class="blog-info">
-            <div>Siste blogginnlegg</div>
-            <g-link :to="post.path">
-                <h2 class="blog-title">{{post.title}}</h2>
-            </g-link>
+    <div class="blog-post-container">
+        <div class="last-blog-post">
+            <div class="column is-one-third cover-image" :style="`background-size: cover; background: url(${post.cover.asset.url})`"></div>
+        
+            <div class="blog-info">
+                <div>Siste blogginnlegg</div>
+                <g-link :to="post.path">
+                    <h2 class="blog-title">{{post.title}}</h2>
+                </g-link>
+            </div>
         </div>
     </div>
 </template>
@@ -37,16 +39,21 @@ export default {
 }
 </script>
 <style scoped>
+.blog-post-container{
+    display: flex;
+    justify-content: center;
+}
 .last-blog-post {
     max-width: 1024px;
     height: 200px;
-    margin: 20px auto 50px auto;
+    margin: 20px 20px 50px 20px;
     background-color: #5cdb95;
     min-height: 200px;
     display:flex;
     align-items: center;
     font-size: 20px;
     font-weight: 500;
+    width: 100%;
 }
 .blog-title{
     font-size: 42px;

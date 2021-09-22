@@ -132,4 +132,10 @@ export default {
   padding: 40px 70px;
   border-radius: 20px;
 }
+
+@media (max-width: 760px){
+  .event-description {
+    font-size: 32px;
+  }
+}
 </style>
