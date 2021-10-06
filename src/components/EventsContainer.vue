@@ -67,6 +67,7 @@ export default {
     min-width: 1024px;
 }
 .event-title{
+    text-align: center;
     color: white;
     font-size: 48px;
     font-weight: 700;
@@ -88,6 +89,9 @@ export default {
 @media (max-width: 760px){
     .button {
         font-size: 20px;
+    }
+    .event-title{
+        font-size: 36px;
     }
 }
 </style>

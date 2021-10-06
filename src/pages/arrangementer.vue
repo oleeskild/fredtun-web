@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <page-header :title="'Arrangementer'" :subtitle="`Fra og med ${niceDate}`" />
+    <page-header :title="'Kommende arrangement'" :subtitle="`Fra og med ${niceDate}`" />
     <div class="columns wrap">
       <div class="column">
         <div v-if="allEvents.length">
