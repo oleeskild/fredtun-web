@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@gridsome/cli": "^0.3.1",
+    "@gridsome/plugin-google-analytics": "^0.1.2",
     "@sanity/image-url": "^0.140.19",
     "bulma": "^0.7.5",
     "bulma-calendar": "^6.0.7",

@@ -13,7 +13,13 @@ module.exports = {
       dataset: 'fredtun',
 
     }
-  }],
+  },
+  {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+          id: 'G-B61TYL1YCK'
+      }
+    }],
   templates: {
     SanityBlogpost: '/blogg/:title/:id'
   }
