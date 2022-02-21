@@ -16,7 +16,7 @@
                   <!-- <span @click="selectNode(node); openModal = true" class="more-info">Mer Info</span> -->
                 </article>
               </div>
-              <div class="tile" v-for="index in Math.floor(smallRentUnits.length/2)" :key="index">
+              <div class="tile" v-for="index in Math.ceil(smallRentUnits.length/2)" :key="index">
                 <rent-tile v-if="(index-1)*2 > -1 && smallRentUnits.length > (index-1)*2" @moreInfoClicked="selectNode($event); openModal = true" :rentUnit="smallRentUnits[(index-1)*2].node"/>
                 <rent-tile v-if="((index-1)*2)+1 > -1 && smallRentUnits.length > ((index-1)*2)+1" @moreInfoClicked="selectNode($event); openModal = true" :rentUnit="smallRentUnits[((index-1)*2)+1].node"/>
               </div>
