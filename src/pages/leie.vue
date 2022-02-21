@@ -124,6 +124,12 @@ export default {
   margin: auto;
   padding-bottom: 50px;
 }
+.column.is-two-thirds{
+  padding-top: 0;
+}
+.column.is-center{
+  background: #f5f5f5;
+}
 .tile >p {
   text-align: center;
 }
@@ -203,6 +209,10 @@ export default {
 }
 .unit-summary:nth-child(2n+1) {
   border: #5bdb955c 6px solid
+}
+.subtitle{
+  color: #4a4a4a;
+  font-weight: normal;
 }
 
 @media (max-width: 1020px) {
