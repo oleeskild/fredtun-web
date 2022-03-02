@@ -1,5 +1,5 @@
 <template>
-  <div class="tile is-parent is-6">
+  <div class="tile is-parent is-6" v-if="rentUnit.name">
     <article class="tile is-child notification">
       <p class="tile-title">{{rentUnit.name}}</p>
       <p>{{rentUnit.price}},- {{rentUnit.priceDenomination}}</p>
