@@ -4,10 +4,6 @@
   <div style="display: flex; justify-content: center;">
     <navigation />
   </div>
-  
-  <div style="display: flex; justify-content: center; font-size: 38px; padding-bottom: 38px;">
-    <a href="https://fredtun.org/innkalling-til-aarsm%C3%B8te-2022.pdf" target="_blank">Innkalling til årsmøte 2022</a>
-  </div>
   <last-blog-post />
   <events-container />
   <div style="margin: 100px 0; display: flex; justify-content: center;">
