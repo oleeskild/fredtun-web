@@ -30,11 +30,10 @@
           <div style="max-width: 400px;">
             <rich-content :blocks="$page.priceInfo._rawDescription" />
           </div>
-        <h2 class="subtitle" style="margin-top: 40px;">Ta kontakt</h2>
-        <contact-form />
+        <h2 class="subtitle" style="margin-top: 40px;">Ta kontakt angående leie</h2>
+        <contact-form :showDatePicker="true"/>
       </div>
     </div>
-
     <h2 class="building-title">Om bygningene</h2>
     <div v-for="{node} in allUnits" :key="node.id" class="unit-summary">
       <h3 class="summary-title">{{node.name}}</h3>
@@ -70,6 +69,14 @@ query {
         minPriceAlternativeDenomination
         _rawDescription
         isprimary
+      }
+    }
+  }
+  bookedDates: allBookedDates{
+    edges{
+      node{
+        fra
+        til
       }
     }
   }
