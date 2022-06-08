@@ -1,6 +1,6 @@
 <template>
     <div class="content-row">
-        <block-content :projectId="'r44b6dmp'" :dataset="'fredtun'" :blocks="blocks" :serializers="serializers" />
+        <block-content :projectId="'obo7jda2'" :dataset="'production'" :blocks="blocks" :serializers="serializers" />
     </div>
 </template>
 <script>

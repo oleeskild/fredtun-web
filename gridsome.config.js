@@ -10,8 +10,8 @@ module.exports = {
     plugins: [{
             use: 'gridsome-source-sanity',
             options: {
-                projectId: 'r44b6dmp',
-                dataset: 'fredtun',
+                projectId: 'obo7jda2',
+                dataset: 'production',
 
             }
         },
@@ -29,6 +29,7 @@ module.exports = {
         },
     ],
     templates: {
-        SanityBlogpost: '/blogg/:title/:id'
+        SanityBlogpost: '/blogg/:title/:id',
+        SanityEvent: '/arrangement/:title/:id',
     },
 }

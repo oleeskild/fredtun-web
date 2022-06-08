@@ -1,5 +1,5 @@
 <template>
-    <block-content :projectId="'r44b6dmp'" :dataset="'fredtun'" :blocks="blocks" :serializers="serializers" />
+    <block-content :projectId="'obo7jda2'" :dataset="'production'" :blocks="blocks" :serializers="serializers" />
 </template>
 <script>
 import BlockContent from 'sanity-blocks-vue-component'

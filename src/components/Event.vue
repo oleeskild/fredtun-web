@@ -13,7 +13,7 @@
         <div class="event-description-container">
           <span class="event-time">{{time}}</span>
           <span class="event-description">{{event? event.title : 'Tittel'}}</span>
-          <span @click="openModal = true" class="event-link">Les Mer</span>
+          <g-link class="event-link" :to="event.path">Les Mer</g-link>
         </div>
       </div>
     </div>
@@ -23,7 +23,7 @@
       <div @click="openModal = false" class="modal-background"></div>
        <div class="modal-content">
          <h2 class="modal-card-title">{{event? event.title : ''}}</h2>
-        <div> {{event ? event.description : ''}}</div>
+         <rich-content :blocks="event._rawDescription" />
       </div>
       <button @click="openModal = false" class="modal-close is-large" aria-label="close"></button>
     </div>
@@ -125,6 +125,8 @@ export default {
   padding-bottom: 10px;
   text-decoration: underline;
   cursor: pointer;
+  color: #4a4a4a
+  ;
 }
 
 .modal-content {

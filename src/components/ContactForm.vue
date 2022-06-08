@@ -14,6 +14,10 @@
       <input class="input" name="email" type="email" placeholder="Din epost" v-model="formData.email" />
       <label for="message">Melding</label>
       <textarea class="textarea" name="message" placeholder="Melding" v-model="formData.message"></textarea>
+      <!--Netlify form workaround-->
+      <input type="hidden" name="toDate" v-if="!showDatePicker" />
+      <input type="hidden" name="fromDate" v-if="!showDatePicker" />
+
       <ClientOnly>
         <div v-if="showDatePicker">
           <v-date-picker locale="no" v-model="formData.range" mode="date" is-range :disabled-dates="bookedDates">
@@ -39,10 +43,10 @@
       <button type="submit" class="button is-medium is-dark">SEND MELDING</button>
     </form>
     <div v-else style="display: flex; flex-direction: column; align-items: center">
-      <span style="font-size: 150px; margin: 50px 0" class="icon has-text-white">
+      <span style="font-size: 150px; margin: 50px 0" class="icon has-text-black">
         <font-awesome :icon="['fas', 'envelope']" />
       </span>
-      <h2 style="font-size: 20px; color:black;">Takk, vi har motatt meldingen din!</h2>
+      <h2 style="font-size: 20px; color:black;">Vi har motatt meldingen din! Du hører fra oss :)</h2>
     </div>
   </div>
 </template>
@@ -68,12 +72,23 @@ export default {
         .join("&");
     },
     handleSubmit(e) {
+      function getNiceDate(date) {
+        return `${date.getDay()}.${date.getMonth() + 1}.${date.getFullYear()}`
+      }
+      const dates = this.formData.range ? {
+        fromDate: getNiceDate(this.formData.range.start),
+        toDate: getNiceDate(this.formData.range.end)
+      }
+        : {}
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
           "form-name": e.target.getAttribute("name"),
-          ...this.formData
+          name: this.formData.name,
+          email: this.formData.email,
+          message: this.formData.message,
+          ...dates
         })
       })
         .then(() => { this.submitted = true; this.formData = {} })
@@ -88,7 +103,6 @@ export default {
       }
 
       const dates = this.$page.bookedDates.edges.map(e => ({ from: e.node.fra, to: e.node.til }));
-      console.log(dates);
       const allDatesList = [];
       for (let i = 0; i < dates.length; i++) {
         let dateToAdd = new Date(dates[i].from);

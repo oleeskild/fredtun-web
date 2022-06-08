@@ -19,7 +19,8 @@ query Events {
       node {
         title
         date
-        description
+        path
+        _rawDescription(resolveReferences: {maxDepth: 2})
       }
     }
   }
