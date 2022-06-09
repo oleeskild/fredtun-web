@@ -31,7 +31,7 @@
             <rich-content :blocks="$page.priceInfo._rawDescription" />
           </div>
         <h2 class="subtitle" style="margin-top: 40px;">Ta kontakt angående leie</h2>
-        <contact-form :showDatePicker="true"/>
+        <contact-form :showDatePicker="false"/>
       </div>
     </div>
     <h2 class="building-title">Om bygningene</h2>
