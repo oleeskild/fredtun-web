@@ -5,7 +5,7 @@
 </template>
 <script>
 import imageUrlBuilder from '@sanity/image-url';
-const builder = imageUrlBuilder({projectId:"r44b6dmp", dataset:"fredtun"});
+const builder = imageUrlBuilder({projectId:"obo7jda2", dataset:"production"});
 export default {
     props:{
         _key: {

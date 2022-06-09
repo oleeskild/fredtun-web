@@ -28,9 +28,10 @@ query Events {
     edges{
       node {
         id
+        path
         title
         date
-        description
+        _rawDescription(resolveReferences: {maxDepth: 2})
       }
     }
   }
