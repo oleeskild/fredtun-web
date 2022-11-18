@@ -6,7 +6,8 @@
     </div>
     <div style="display: flex; justify-content: center; font-size: 38px; padding-bottom: 38px;" id="christmas">
       <a class="christmas" href="https://fredtun.org/arrangement/julebord/3df2a4e6-b79b-4c0f-bdad-c15e6078f174/">
-        🎄 Påmelding til Julebord 2022 🎄
+        <span>Påmelding til Julebord 2022 </span>
+        <span>🎄</span> 
       </a>
     </div>
     <events-container />
@@ -115,7 +116,12 @@ h1 {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d160);
   background-size: 200% 200%;
   animation: gradient 10s ease infinite;
-  margin: 5px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .christmas:hover {
