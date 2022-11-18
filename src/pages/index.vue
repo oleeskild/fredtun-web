@@ -1,20 +1,20 @@
 <template>
-<div>
-  <hero/>
-  <div style="display: flex; justify-content: center;">
-    <navigation />
+  <div>
+    <hero />
+    <div style="display: flex; justify-content: center;">
+      <navigation />
+    </div>
+    <div style="display: flex; justify-content: center; font-size: 38px; padding-bottom: 38px;" id="christmas">
+      <a class="christmas" href="https://fredtun.org/arrangement/julebord/3df2a4e6-b79b-4c0f-bdad-c15e6078f174/">
+        🎄 Påmelding til Julebord 2022 🎄
+      </a>
+    </div>
+    <events-container />
+    <div style="margin: 100px 0; display: flex; justify-content: center;">
+      <rent-info-box />
+    </div>
+    <fredtun-footer />
   </div>
-  <div style="display: flex; justify-content: center; font-size: 38px; padding-bottom: 38px;">
-    <a class="christmas" href="https://fredtun.org/arrangement/julebord/3df2a4e6-b79b-4c0f-bdad-c15e6078f174/">
-      🎄 Påmelding til Julebord 2022 🎄
-    </a>
-  </div>
-  <events-container />
-  <div style="margin: 100px 0; display: flex; justify-content: center;">
-    <rent-info-box  />
-  </div>
-  <fredtun-footer/>
-</div>
 </template>
 
 <script>
@@ -35,7 +35,35 @@ export default {
     FredtunFooter,
     LastBlogPost
   },
-  layout: 'blank'
+  layout: 'blank',
+  mounted: function () {
+    let constrain = 200;
+    let mouseOverContainer = document.body;
+    let ex1Layer = document.getElementById("christmas");
+
+    function transforms(x, y, el) {
+      let box = el.getBoundingClientRect();
+      let calcX = -(y - box.y - (box.height / 2)) / constrain;
+      let calcY = (x - box.x - (box.width / 2)) / constrain;
+
+      return "perspective(500px) "
+        + "   rotateX(" + calcX + "deg) "
+        + "   rotateY(" + calcY + "deg) ";
+    };
+
+    function transformElement(el, xyEl) {
+      el.style.transform = transforms.apply(null, xyEl);
+    }
+
+    mouseOverContainer.onmousemove = function (e) {
+      let xy = [e.clientX, e.clientY];
+      let position = xy.concat([ex1Layer]);
+
+      window.requestAnimationFrame(function () {
+        transformElement(ex1Layer, position);
+      });
+    };
+  },
 }
 </script>
 
@@ -49,7 +77,8 @@ export default {
   text-align: center;
 }
 
-.title, h1 {
+.title,
+h1 {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
@@ -70,43 +99,46 @@ export default {
 .links {
   padding-top: 15px;
 }
-.wrap{
+
+.wrap {
   min-width: 1024px;
 }
 
 .christmas {
-    background: #8ee4af;
-    padding: 20px 30px;
-    border-radius: 30px;
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    transition: transform 0.3s;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d160);
-    background-size: 200% 200%;
-    animation: gradient 10s ease infinite;
+  background: #8ee4af;
+  padding: 20px 30px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d160);
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+  margin: 5px;
 }
 
-.christmas:hover{
-    transform: scale(1.1);
+.christmas:hover {
+  transform: scale(1.1);
 }
 
-@media (max-width: 1080px){
-  .wrap{
+@media (max-width: 1080px) {
+  .wrap {
     min-width: 80%;
   }
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
+  0% {
+    background-position: 0% 50%;
+  }
 
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
 </style>
