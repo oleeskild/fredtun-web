@@ -7,7 +7,7 @@
     <div style="display: flex; justify-content: center; font-size: 38px; padding-bottom: 38px;" id="christmas">
       <a class="christmas" href="https://fredtun.org/arrangement/julebord/3df2a4e6-b79b-4c0f-bdad-c15e6078f174/">
         <span>Påmelding til Julebord 2022 </span>
-        <span>🎄</span> 
+        <span style="font-size: 100px">🎄</span> 
       </a>
     </div>
     <events-container />
