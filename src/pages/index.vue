@@ -7,7 +7,6 @@
   <div style="display: flex; justify-content: center; font-size: 38px; padding-bottom: 38px;">
     <a href="https://fredtun.org/arrangement/julebord/3df2a4e6-b79b-4c0f-bdad-c15e6078f174/" target="_blank">Påmelding til Julebord 2022</a>
   </div>
-  <last-blog-post />
   <events-container />
   <div style="margin: 100px 0; display: flex; justify-content: center;">
     <rent-info-box  />
