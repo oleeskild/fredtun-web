@@ -4,12 +4,6 @@
     <div style="display: flex; justify-content: center;">
       <navigation />
     </div>
-    <div style="display: flex; justify-content: center; font-size: 38px; padding-bottom: 38px;" id="christmas">
-      <a class="christmas" href="https://fredtun.org/arrangement/julebord/3df2a4e6-b79b-4c0f-bdad-c15e6078f174/">
-        <span>Påmelding til Julebord 2022 </span>
-        <span style="font-size: 100px">🎄</span> 
-      </a>
-    </div>
     <events-container />
     <div style="margin: 100px 0; display: flex; justify-content: center;">
       <rent-info-box />
@@ -103,29 +97,6 @@ h1 {
 
 .wrap {
   min-width: 1024px;
-}
-
-.christmas {
-  background: #8ee4af;
-  padding: 20px 30px;
-  border-radius: 30px;
-  color: white;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.3s;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d160);
-  background-size: 200% 200%;
-  animation: gradient 10s ease infinite;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.christmas:hover {
-  transform: scale(1.1);
 }
 
 @media (max-width: 1080px) {
