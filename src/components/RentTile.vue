@@ -2,7 +2,7 @@
   <div class="tile is-parent is-6" v-if="rentUnit.name">
     <article class="tile is-child notification">
       <p class="tile-title">{{rentUnit.name}}</p>
-      <p>{{rentUnit.price}},- {{rentUnit.priceDenomination}}</p>
+      <p v-if="rentUnit.price">{{rentUnit.price}},- {{rentUnit.priceDenomination}}</p>
       <p v-if="rentUnit.minPrice" class="tile-subtitle">Minstepris:</p>
       <p v-if="rentUnit.minPrice">{{rentUnit.minPrice}},- {{rentUnit.minPriceDenmonination}}</p>
       <p v-if="rentUnit.minPriceAlternative && rentUnit.minPriceAlternative.toString().trim()">{{rentUnit.minPriceAlternative}},- {{rentUnit.minPriceAlternativeDenomination}}</p>
