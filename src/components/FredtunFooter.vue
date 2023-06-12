@@ -27,7 +27,7 @@
             <h3 class="vipps">Vipps: 565166</h3>
             <h3 class="account">Kontonummer: 3361.23.85160 </h3>
           </div>
-          <div class="copyright" style="z-index:10; margin-top: auto; color: black">© 2021 Fredtun </div>
+          <div class="copyright" style="z-index:10; margin-top: auto; color: black">© 2023 Fredtun </div>
         </div>
         
           
