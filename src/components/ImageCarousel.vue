@@ -1,11 +1,13 @@
 <template>
     <div class="carousel-container">
         <div>
+        <ClientOnly>
             <carousel :per-page="1" :mouse-drag="true" :loop="true" :autoplay="true" :autoplay-timeout="5000">
                 <slide v-for="img in images" :key="img.id">
                     <img :src="img.src" :alt="img.alt" />
                 </slide>
             </carousel>
+        </ClientOnly>
         </div>
     </div>
 </template>
