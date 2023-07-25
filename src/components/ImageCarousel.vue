@@ -1,25 +1,25 @@
 <template>
     <div class="carousel-container">
         <div>
-        <ClientOnly>
-            <carousel :per-page="1" :mouse-drag="true" :loop="true" :autoplay="true" :autoplay-timeout="5000">
-                <slide v-for="img in images" :key="img.id">
-                    <img :src="img.src" :alt="img.alt" />
-                </slide>
-            </carousel>
-        </ClientOnly>
+            <ClientOnly>
+                <carousel :per-page="1" :mouse-drag="true" :loop="true" :autoplay="true" :autoplay-timeout="5000">
+                    <slide v-for="img in images" :key="img.id">
+                        <img :src="img.src" :alt="img.alt" />
+                    </slide>
+                </carousel>
+            </ClientOnly>
         </div>
     </div>
 </template>
 <script>
 export default {
     components: {
-    Carousel: () =>
-      import('vue-carousel')
-        .then(m => m.Carousel).catch(),
-    Slide: () =>
-      import('vue-carousel')
-        .then(m => m.Slide).catch()
+        Carousel: () =>
+            import('vue-carousel')
+                .then(m => m.Carousel).catch(),
+        Slide: () =>
+            import('vue-carousel')
+                .then(m => m.Slide).catch()
     },
     data() {
         return {
