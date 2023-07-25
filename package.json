@@ -18,6 +18,7 @@
         "gridsome-source-sanity": "^1.0.4",
         "sanity-blocks-vue-component": "^0.1.0",
         "v-calendar": "^2.4.1",
+        "vue-carousel": "^0.18.0",
         "vue-client-only": "^2.1.0"
     },
     "devDependencies": {

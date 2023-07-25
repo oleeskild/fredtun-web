@@ -4,7 +4,7 @@
     <div style="display: flex; justify-content: center;">
       <navigation />
     </div>
-    <events-container />
+    <image-carousel />
     <div style="margin: 100px 0; display: flex; justify-content: center;">
       <rent-info-box />
     </div>
@@ -17,6 +17,7 @@ import Hero from '~/components/Hero.vue'
 import Navigation from '~/components/Navigation.vue'
 import LastBlogPost from '~/components/LastBlogPost.vue'
 import EventsContainer from '~/components/EventsContainer.vue'
+import ImageCarousel from '~/components/ImageCarousel.vue'
 import RentInfoBox from '~/components/RentInfoBox.vue'
 import FredtunFooter from '~/components/FredtunFooter.vue'
 
@@ -28,7 +29,8 @@ export default {
     EventsContainer,
     RentInfoBox,
     FredtunFooter,
-    LastBlogPost
+    LastBlogPost,
+    ImageCarousel
   },
   layout: 'blank',
   mounted: function () {
