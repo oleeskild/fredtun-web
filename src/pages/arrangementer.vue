@@ -21,7 +21,6 @@ import PageHeader from "~/components/PageHeader.vue";
 export default {
   metaInfo: { title: "Arrangementer" },
   components: {
-    NoEvent,
     PageHeader
   },
     data() {
