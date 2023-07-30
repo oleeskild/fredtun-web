@@ -9,9 +9,9 @@
         </label>
       </p>
       <label for="name">Navn</label>
-      <input class="input" name="name" type="text" placeholder="Navn" v-model="formData.name" />
+      <input class="text-input" name="name" type="text" placeholder="Navn" v-model="formData.name" />
       <label for="email">Din epost</label>
-      <input class="input" name="email" type="email" placeholder="Din epost" v-model="formData.email" />
+      <input class="text-input" name="email" type="email" placeholder="Din epost" v-model="formData.email" />
       <label for="message">Melding</label>
       <textarea class="textarea" name="message" placeholder="Melding" v-model="formData.message"></textarea>
       <!--Netlify form workaround-->
@@ -141,7 +141,7 @@ export default {
   z-index: 2;
 }
 
-.input,
+.text-input,
 .textarea {
   margin: 10px 0;
 }
