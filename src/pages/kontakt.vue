@@ -5,7 +5,7 @@
       <div class="column">
         <div class="card">
           <div class="card-image">
-            <figure class="image is-square" style="background-image: url('https://www.skudenesnytt.no/wp-content/uploads/2017/12/GeirSommerfeldt.jpg')">
+            <figure class="image is-square" style="background-image: url('https://scontent.fosl3-2.fna.fbcdn.net/v/t1.6435-9/37250876_422842198229006_3681242569917857792_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=343CPbOozxwAX_EaVtA&_nc_ht=scontent.fosl3-2.fna&oh=00_AfA5_-dq1mNJNLU8nCETyBMdlra22H32kgvuc9rBciUleg&oe=64EDFF43')">
               
             </figure>
           </div>
