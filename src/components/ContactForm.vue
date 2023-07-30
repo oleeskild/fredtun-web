@@ -8,11 +8,11 @@
           <input name="bot-field" />
         </label>
       </p>
-      <label for="name">Navn</label>
+      <label for="name" style="border:none;box-shadow: none;margin-bottom: -12px;">Navn</label>
       <input class="input" name="name" type="text" placeholder="Navn" v-model="formData.name" />
-      <label for="email">Din epost</label>
+      <label for="email" style="border:none;box-shadow: none;margin-bottom: -12px;" >Din epost</label>
       <input class="input" name="email" type="email" placeholder="Din epost" v-model="formData.email" />
-      <label for="message">Melding</label>
+      <label style="border:none;box-shadow: none; max-height: 1em; min-height: 3em;" for="message">Melding</label>
       <textarea class="textarea" name="message" placeholder="Melding" v-model="formData.message"></textarea>
       <!--Netlify form workaround-->
       <input type="hidden" name="toDate" v-if="!showDatePicker" />
