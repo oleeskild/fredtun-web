@@ -11,6 +11,7 @@
                     <ul>
                         <li>- 70 sengeplasser</li>
                         <li>- 14 soverom</li>
+                        <li>- Pilegrimsherberge</li>
                         <li>- 7 dusjfasiliteter</li>
                         <li>- 1 fotballbane</li>
                         <li>- 1 volleyballbane</li>

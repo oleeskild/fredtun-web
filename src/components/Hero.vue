@@ -14,6 +14,9 @@
             mot sjøen på hver side av området. Innenfor er det opparbeidet med
             fotballbane, lekeplass, plener og grusveier mellom bygningene.
           </p>
+          <p>
+            Er du på pilegrimstur? Fredtun er også pilegrimsherberge og tilbyr overnatting til kr. 250 pr. person.
+          </p>
         </div>
         <a
           href="https://www.facebook.com/FredtunSkudeneshavn/"
