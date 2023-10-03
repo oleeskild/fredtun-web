@@ -2,7 +2,7 @@
   <Layout>
     <page-header :title="'Kommende arrangement'" />
     <div class="columns wrap">
-      <div class="column">
+      <div class="column center">
         <div>
           Vi publiserer alle arrangementer på vår Facebook side
         </div>
@@ -52,6 +52,12 @@ export default {
   margin-top: 15px;
   z-index: 2;
   position: relative;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 </style>
