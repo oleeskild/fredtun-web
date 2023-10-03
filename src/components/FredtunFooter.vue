@@ -26,6 +26,7 @@
             <div>Ønsker du å støtte Fredtun? </div>
             <h3 class="vipps">Vipps: 565166</h3>
             <h3 class="account">Kontonummer: 3361.23.85160 </h3>
+            <img class="mobile-only" src="https://res.cloudinary.com/dix4ngy25/image/upload/v1696341681/image_y2khig.png" style="transform: translate(-4%, 15px);">
           </div>
           <div class="copyright" style="z-index:10; margin-top: auto; color: black">© 2023 Fredtun </div>
         </div>
@@ -205,6 +206,10 @@ export default {
   background-color: rgba(0,0,0,0.1);
 }
 
+.mobile-only{
+  display: none;
+}
+
 @media (max-width: 600px){
   .subtitle {
        margin-left: 10px;
@@ -229,6 +234,11 @@ export default {
   .address {
     display: none;
   }
+
+  .mobile-only {
+    display: block;
+  }
+  
   .column {
     justify-content: flex-start;
   }
