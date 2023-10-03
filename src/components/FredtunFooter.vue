@@ -39,6 +39,7 @@
           <h2 class="subtitle address-title">Besøksadresse</h2>
           <div class="text">Austre Karmøyveg 820, Karmøy</div>
           <Map />
+          <img src="https://res.cloudinary.com/dix4ngy25/image/upload/v1696341681/image_y2khig.png" style="transform: translate(-16%, 15px);">
         </div>
       </div>
     </div>
@@ -93,7 +94,8 @@ export default {
   /* border-bottom: 6px solid #389583; */
   /* border-top: 6px solid #389583; */
   /* border-left: 6px solid #389583; */
-  background-color: rgba(56, 149, 131, 0.3);
+    border: 2px solid rgba(56,149,131, 0.3);
+    border-radius: 10px;
   
  
 }
