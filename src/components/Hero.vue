@@ -253,5 +253,9 @@ export default {
     max-width: 280px;
     text-align: center;
   }
+
+  .scroll-indicator {
+    display: none;
+  }
 }
 </style>
