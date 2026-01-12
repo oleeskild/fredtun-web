@@ -5,21 +5,21 @@
       <div class="column">
         <div class="card">
           <div class="card-image">
-            <figure class="image is-square" style="background-image: url('https://scontent.fosl3-2.fna.fbcdn.net/v/t1.6435-9/37250876_422842198229006_3681242569917857792_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=343CPbOozxwAX_EaVtA&_nc_ht=scontent.fosl3-2.fna&oh=00_AfA5_-dq1mNJNLU8nCETyBMdlra22H32kgvuc9rBciUleg&oe=64EDFF43')">
+            <figure class="image is-square" style="background-image: url('https://www.skudeaakra.no/-/media/banker/skudeaakra/ansatte/Kristian-Lassesen.jpg?mw=800')">
               
             </figure>
           </div>
           <div class="card-content">
             <div class="media">
               <div class="media-content">
-                <p class="title is-4">Geir Sofus Sommerfeldt</p>
+                <p class="title is-4">Kristian Lassesen</p>
                 <p class="subtitle is-6">Daglig leder</p>
               </div>
             </div>
 
             <div class="content">
-              959 73 600
-              <br />geir@sommerfeldt.no
+              900 89 979
+              <br />kristian@fredtun.no
             </div>
           </div>
         </div>
