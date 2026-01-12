@@ -92,6 +92,7 @@ export default {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: white !important;
 }
 
 .contact-hero p {
