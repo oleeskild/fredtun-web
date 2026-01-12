@@ -97,7 +97,7 @@
                 </svg>
               </div>
               <h4>Leirskole</h4>
-              <p>Laering og opplevelser for skoleklasser</p>
+              <p>Læring og opplevelser for skoleklasser</p>
             </div>
           </div>
         </div>
