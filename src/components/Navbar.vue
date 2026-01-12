@@ -117,6 +117,12 @@ export default {
   height: 36px;
   width: auto;
   vertical-align: middle;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.navbar.scrolled .navbar-logo img {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(18%) saturate(1095%) hue-rotate(108deg) brightness(92%) contrast(89%);
 }
 
 .navbar-logo span {
@@ -205,6 +211,15 @@ export default {
 }
 
 @media (max-width: 900px) {
+  .navbar-brand {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .navbar-logo {
+    margin-right: 0;
+  }
+
   .navbar-burger {
     display: block;
   }
