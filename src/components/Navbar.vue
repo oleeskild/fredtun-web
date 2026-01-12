@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar" :class="{ 'scrolled': isScrolled }" role="navigation" aria-label="main navigation">
+  <nav class="navbar" :class="{ 'scrolled': isScrolled || !isHomepage }" role="navigation" aria-label="main navigation">
     <div class="navbar-container">
       <div class="navbar-brand">
         <g-link to="/" class="navbar-logo">
@@ -35,6 +35,11 @@ export default {
       navbarToggled: false,
       isScrolled: false
     };
+  },
+  computed: {
+    isHomepage() {
+      return this.$route && this.$route.path === '/';
+    }
   },
   watch: {
     '$route': {
