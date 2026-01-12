@@ -285,5 +285,14 @@ export default {
   .contact-image {
     padding: 0 1rem 2rem;
   }
+
+  .person-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .person-title h3 {
+    font-size: 1.3rem;
+  }
 }
 </style>
