@@ -40,7 +40,9 @@ export default {
     '$route': {
       handler() {
         // Scroll to top and reset state on route change
-        window.scrollTo(0, 0);
+        if (typeof window !== 'undefined') {
+          window.scrollTo(0, 0);
+        }
         this.isScrolled = false;
         this.navbarToggled = false;
       },
