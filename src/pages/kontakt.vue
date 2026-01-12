@@ -35,8 +35,8 @@
 
             <div class="info-cards">
               <div class="info-card">
-                <h4>Besoksadresse</h4>
-                <p>Austre Karmoyveg 820<br>4260 Karmoy</p>
+                <h4>Besøksadresse</h4>
+                <p>Austre Karmoyveg 820<br>4260 Karmøy</p>
               </div>
               <div class="info-card">
                 <h4>Postadresse</h4>
@@ -295,4 +295,4 @@ export default {
     font-size: 1.3rem;
   }
 }
-</style>
+</stylee

@@ -17,6 +17,12 @@
               </svg>
             </a>
           </div>
+          <div class="pilgrim-badge">
+            <span class="badge-label">Tilknyttet</span>
+            <a href="https://pilegrimsleden.no/pilegrimssentrene/avaldsnes" target="_blank" rel="noopener">
+              <img src="https://res.cloudinary.com/dix4ngy25/image/upload/v1696341681/image_y2khig.png" alt="Pilegrimssenter Avaldsnes" />
+            </a>
+          </div>
         </div>
 
         <div class="footer-nav">
@@ -144,6 +150,37 @@ export default {
   transform: translateY(-2px);
 }
 
+.pilgrim-badge {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pilgrim-badge .badge-label {
+  font-size: 0.7rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.pilgrim-badge a {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.pilgrim-badge a:hover {
+  transform: translateY(-2px);
+}
+
+.pilgrim-badge img {
+  height: 40px;
+  width: auto;
+  border-radius: 6px;
+  background: white;
+  padding: 6px 10px;
+}
+
 .footer-nav h3,
 .footer-contact h3,
 .footer-support h3 {
@@ -259,6 +296,10 @@ export default {
 
   .social-links {
     justify-content: center;
+  }
+
+  .pilgrim-badge {
+    align-items: center;
   }
 }
 
