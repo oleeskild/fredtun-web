@@ -72,14 +72,6 @@ query {
       }
     }
   }
-  bookedDates: allBookedDates{
-    edges{
-      node{
-        fra
-        til
-      }
-    }
-  }
 }
 </page-query>
 <script>

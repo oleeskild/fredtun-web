@@ -9,11 +9,10 @@
     "dependencies": {
         "@gridsome/cli": "^0.3.4",
         "@gridsome/plugin-google-analytics": "^0.1.2",
-        "@gridsome/source-airtable": "^0.2.0",
-        "@sanity/image-url": "^1.0.1",
+        "@sanity/image-url": "^1.2.0",
         "bulma": "^0.9.4",
         "bulma-calendar": "^6.1.18",
-        "dotenv": "^16.0.1",
+        "dotenv": "^16.6.1",
         "gridsome": "^0.7.23",
         "gridsome-source-sanity": "^1.0.4",
         "sanity-blocks-vue-component": "^0.1.0",

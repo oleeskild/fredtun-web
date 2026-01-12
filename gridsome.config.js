@@ -14,19 +14,7 @@ module.exports = {
                 dataset: 'production',
 
             }
-        },
-        {
-            use: '@gridsome/source-airtable',
-            options: {
-                apiKey: process.env.AIRTABLE_API_KEY, // required
-                base: 'appFT0o0L7aB2kmyV', // required
-                tables: [{
-                    name: 'Leieavtaler', // required
-                    typeName: 'bookedDates', // required
-                }],
-                tableName: 'Fredtun', // required
-            },
-        },
+        }
     ],
     templates: {
         SanityBlogpost: '/blogg/:title/:id',
