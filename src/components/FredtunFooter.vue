@@ -1,268 +1,287 @@
 <template>
-  <div class>
-    <div class="columns">
-      <div class="column contact-form">
-        <div class="lightgreen"></div>
-        <div class="footer-container">
-          <h2 class="footer-header subtitle"> <img style="height: 75px; margin-right: 12px" src="/logofred.png" /> Fredtun</h2>
-          <div class="footer-links">
-            <div class="footer-link-container">
-              <g-link class="footer-link" to="/kontakt">Kontakt Oss</g-link>
-            </div>
-            <div class="footer-link-container">
-              <g-link class="footer-link" to="/">Hjem</g-link>
-            </div>
-            <div class="footer-link-container">
-              <g-link class="footer-link" to="/leie">Utleie</g-link>
-            </div>
-            <div class="footer-link-container">
-              <g-link class="footer-link" to="/om-oss">Om Fredtun</g-link>
-            </div>
-            <div class="footer-link-container">
-              <g-link class="footer-link" to="/blogg">Blogg</g-link>
-            </div>
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <g-link to="/" class="footer-logo">
+            <img src="/logofred.png" alt="Fredtun" />
+            <span>Fredtun</span>
+          </g-link>
+          <p class="footer-tagline">
+            Et unikt sted ved Karmsundet for leirskole, arrangementer og overnatting.
+          </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/FredtunSkudeneshavn/" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
           </div>
-          <div class="support">
-            <div>Ønsker du å støtte Fredtun? </div>
-            <h3 class="vipps">Vipps: 565166</h3>
-            <h3 class="account">Kontonummer: 3361.23.85160 </h3>
-            <img class="mobile-only" src="https://res.cloudinary.com/dix4ngy25/image/upload/v1696341681/image_y2khig.png" style="transform: translate(-4%, 15px);">
-          </div>
-          <div class="copyright" style="z-index:10; margin-top: auto; color: black">© 2023 Fredtun </div>
         </div>
-        
-          
 
-        <Bezier :color="'#8ee4af'" class="curve" />
-      </div>
-      <div class="column address">
-        <div>
-          <h2 class="subtitle address-title">Besøksadresse</h2>
-          <div class="text">Austre Karmøyveg 820, Karmøy</div>
-          <Map />
-          <img src="https://res.cloudinary.com/dix4ngy25/image/upload/v1696341681/image_y2khig.png" style="transform: translate(-16%, 15px);">
+        <div class="footer-nav">
+          <h3>Sider</h3>
+          <nav>
+            <g-link to="/">Hjem</g-link>
+            <g-link to="/leie">Utleie & Priser</g-link>
+            <g-link to="/arrangementer">Arrangementer</g-link>
+            <g-link to="/om-oss">Om Fredtun</g-link>
+            <g-link to="/kontakt">Kontakt Oss</g-link>
+          </nav>
+        </div>
+
+        <div class="footer-contact">
+          <h3>Besøksadresse</h3>
+          <address>
+            Austre Karmøyveg 820<br />
+            4260 Karmøy
+          </address>
+          <div class="map-container">
+            <Map />
+          </div>
+        </div>
+
+        <div class="footer-support">
+          <h3>Støtt Fredtun</h3>
+          <p>Ønsker du å bidra til driften av Fredtun?</p>
+          <div class="support-info">
+            <div class="support-item">
+              <span class="support-label">Vipps</span>
+              <span class="support-value">565166</span>
+            </div>
+            <div class="support-item">
+              <span class="support-label">Konto</span>
+              <span class="support-value">3361.23.85160</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="footer-bottom">
+      <div class="footer-container">
+        <p>&copy; {{ currentYear }} Fredtun. Alle rettigheter reservert.</p>
+      </div>
+    </div>
+  </footer>
 </template>
 <script>
-import Bezier from "~/components/Bezier.vue";
 import Map from "~/components/Map.vue";
-import ContactForm from "~/components/ContactForm.vue";
 export default {
   components: {
-    Bezier,
-    Map,
-    ContactForm
+    Map
+  },
+  computed: {
+    currentYear() {
+      return new Date().getFullYear();
+    }
   }
 };
 </script>
 <style scoped>
-.footer-container {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "header header"
-    "links links"
-    "vipps ."
-    "footer footer";
-  z-index: 10; 
-  margin-right: 150px;
+.footer {
+  background: #1a1a1a;
+  color: #fff;
 }
 
-.footer-header{
-  grid-area: header;
-  font-family: Prociono, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.footer-main {
+  padding: 4rem 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-brand {
+  max-width: 280px;
+}
+
+.footer-logo {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: white;
+  font-family: Prociono, Georgia, serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.footer-links {
-  display: flex; 
-  flex-direction: column; 
-  grid-area: links;
-}
-.support{
-  grid-area: vipps;
-  font-size: 24px;
-  max-width: 500px;
-  color:white;
-  margin: 10px 0 25px 0;
-  padding: 10px;
-  text-align:start;
-  /* border-bottom: 6px solid #389583; */
-  /* border-top: 6px solid #389583; */
-  /* border-left: 6px solid #389583; */
-    border: 2px solid rgba(56,149,131, 0.3);
-    border-radius: 10px;
-  
- 
-}
-.support>h3{
-  font-size: 32px;
-  text-align: start;
+.footer-logo img {
+  height: 40px;
+  width: auto;
 }
 
-.support>.vipps{
-  font-weight: 600;
+.footer-tagline {
+  color: #999;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-.support>.account{
-  font-weight: 600;
-}
-
-
-.copyright {
-  grid-area: footer;
-}
-
-.columns {
-  min-height: 500px;
-  color: rgb(229, 240, 221);
-  background-color: #389583;
-}
-.column {
+.social-links {
   display: flex;
-  justify-content: flex-end;
-  padding-left: 30px;
-}
-.contact-form {
-  position: relative;
- 
-}
-.address {
-  background-color: #389583;
-  justify-content: flex-start;
-  margin-left: 250px;
+  gap: 1rem;
 }
 
-.address-title{
-  margin-bottom: 0 !important;
-}
-.curve {
-  position: absolute;
-  right: -120px;
-  top: 0;
-  height: 100%;
-  z-index: 1;
-}
-.lightgreen {
-  position: absolute;
-  height: 100%;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 80%;
-  background-color: #8ee4af;
-}
-.subtitle {
-  position: relative;
-  z-index: 2;
-  color: white;
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 0;
-  margin-top: 25px;
-  padding: 10px 0;
-}
-.text {
-  font-size: 24px;
-  color:white;
-  padding-bottom: 10px;
-}
-.form{
-    position: relative;
-    z-index: 2;
-}
-.input, .textarea {
-    margin: 10px 0;
-}
-.button {
-    margin: 20px 0;
-    width: 100%;
-}
-.is-link {
-    background-color: rgba(5, 56, 106, 0.8);
-}
-.is-link:hover {
-    background-color: rgba(5, 56, 106, 1);
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #333;
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.2s ease;
 }
 
-.footer-link {
-  color: white;
-  font-size: 24px;
-  padding: 5px;
-  border-radius: 10px;
+.social-links a:hover {
+  background: #2D5A4A;
+  transform: translateY(-2px);
 }
 
-.footer-link-container {
-  margin-bottom: 10px;
+.footer-nav h3,
+.footer-contact h3,
+.footer-support h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin-bottom: 1.25rem;
 }
 
-
-.footer-link:hover {
-  background-color: rgba(0,0,0,0.1);
+.footer-nav nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.mobile-only{
-  display: none;
+.footer-nav a {
+  color: #999;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
-@media (max-width: 600px){
-  .subtitle {
-       margin-left: 10px;
-   } 
+.footer-nav a:hover {
+  color: #fff;
+}
+
+.footer-contact address {
+  font-style: normal;
+  color: #999;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.map-container {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 150px;
+}
+
+.footer-support p {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.support-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.support-item {
+  display: flex;
+  flex-direction: column;
+  background: #252525;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+.support-label {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.support-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  font-family: monospace;
+}
+
+.footer-bottom {
+  background: #111;
+  padding: 1.5rem 2rem;
+}
+
+.footer-bottom .footer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-bottom p {
+  color: #666;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
   .footer-container {
-    margin: 0;
-    grid-template-areas: 
-      "header header"
-      "links links"
-      "vipps vipps"
-      "footer footer";
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
   }
-  .vipps {
-    margin: auto;
+
+  .footer-brand {
+    grid-column: 1 / -1;
+    max-width: none;
+    text-align: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .footer-tagline {
+    max-width: 400px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 }
 
+@media (max-width: 600px) {
+  .footer-main {
+    padding: 3rem 1.5rem;
+  }
 
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
+  .footer-nav nav {
+    align-items: center;
+  }
 
-@media (max-width: 1400px){
-  .address {
+  .footer-contact address {
+    text-align: center;
+  }
+
+  .map-container {
     display: none;
   }
-
-  .mobile-only {
-    display: block;
-  }
-  
-  .column {
-    justify-content: flex-start;
-  }
-  .lightgreen{
-    display:none;
-  }
-  .curve {
-    display: none;
-  }
-  .vipps {
-    border-color: rgb(142, 228, 175);
-  }
-
-}
-
-@media (max-width: 1000px){
-  
-  
-}
-
-@media (max-width: 1100px){
-    .lightgreen {
-        width: 100%;
-    }
-    
 }
 </style>

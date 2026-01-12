@@ -1,63 +1,27 @@
 <template>
-  <div>
+  <div class="home">
+    <navbar />
     <hero />
-    <div style="display: flex; justify-content: center;">
-      <navigation />
-    </div>
-    <div style="margin: 100px 0; display: flex; justify-content: center;">
-      <rent-info-box />
-    </div>
+    <rent-info-box />
     <fredtun-footer />
   </div>
 </template>
 
 <script>
+import Navbar from '~/components/Navbar.vue'
 import Hero from '~/components/Hero.vue'
-import Navigation from '~/components/Navigation.vue'
-import LastBlogPost from '~/components/LastBlogPost.vue'
-import EventsContainer from '~/components/EventsContainer.vue'
 import RentInfoBox from '~/components/RentInfoBox.vue'
 import FredtunFooter from '~/components/FredtunFooter.vue'
 
 export default {
   name: "Fremside",
   components: {
+    Navbar,
     Hero,
-    Navigation,
-    EventsContainer,
     RentInfoBox,
     FredtunFooter,
-    LastBlogPost
   },
   layout: 'blank',
-  mounted: function () {
-    let constrain = 200;
-    let mouseOverContainer = document.body;
-    let ex1Layer = document.getElementById("christmas");
-
-    function transforms(x, y, el) {
-      let box = el.getBoundingClientRect();
-      let calcX = -(y - box.y - (box.height / 2)) / constrain;
-      let calcY = (x - box.x - (box.width / 2)) / constrain;
-
-      return "perspective(500px) "
-        + "   rotateX(" + calcX + "deg) "
-        + "   rotateY(" + calcY + "deg) ";
-    };
-
-    function transformElement(el, xyEl) {
-      el.style.transform = transforms.apply(null, xyEl);
-    }
-
-    mouseOverContainer.onmousemove = function (e) {
-      let xy = [e.clientX, e.clientY];
-      let position = xy.concat([ex1Layer]);
-
-      window.requestAnimationFrame(function () {
-        transformElement(ex1Layer, position);
-      });
-    };
-  },
 }
 </script>
 

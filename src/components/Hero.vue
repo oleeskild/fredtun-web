@@ -1,121 +1,257 @@
 <template>
-  <section class="hero is-primary">
-    <div class="columns">
-      <div class="column is-two-fifths text-container">
-        <div class="text">
-          <div style="display: flex; align-items: center;">
-            <h1 class="title" style="color:white;"><img style="height: 75px" src="/logofred.png" /> Fredtun</h1>
-          </div>
-          <p>
-            Fredtun ligger et par km nord for Skudeneshavn på østsiden
-            av Karmøy. Stedet er omkranset av fjell og vender mot sjøen ved
-            sørenden av Karmsundet. Du kommer inn på området gjennom et
-            naturlig smalt pass mellom de to fjellryggene som strekker seg ned
-            mot sjøen på hver side av området. Innenfor er det opparbeidet med
-            fotballbane, lekeplass, plener og grusveier mellom bygningene.
-          </p>
-          <p>
-            Er du på pilegrimstur? Fredtun er også pilegrimsherberge og tilbyr overnatting til kr. 250 pr. person.
-          </p>
+  <section class="hero">
+    <div class="hero-background"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="title">
+          <img class="logo" src="/logofred.png" alt="Fredtun logo" />
+          Fredtun
+        </h1>
+        <p class="tagline">Et unikt sted ved Karmsundet</p>
+        <p class="description">
+          Fredtun ligger et par km nord for Skudeneshavn på østsiden av Karmøy.
+          Omkranset av fjell og vendt mot sjøen - et naturlig smalt pass mellom
+          to fjellrygger leder deg inn til dette unike stedet.
+        </p>
+        <div class="hero-badges">
+          <span class="badge">Pilegrimsherberge</span>
+          <span class="badge">70 sengeplasser</span>
+          <span class="badge">Leirskole</span>
         </div>
-        <a
-          href="https://www.facebook.com/FredtunSkudeneshavn/"
-          target="_blank"
-          class="button is-large is-link"
-          >FØLG OSS PÅ FACEBOOK</a
-        >
-        <Bezier class="curve" />
+        <div class="hero-buttons">
+          <g-link to="/leie" class="button primary">Se utleie & priser</g-link>
+          <a
+            href="https://www.facebook.com/FredtunSkudeneshavn/"
+            target="_blank"
+            rel="noopener"
+            class="button secondary"
+          >Følg oss på Facebook</a>
+        </div>
       </div>
-      <div class="column cover-image"></div>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
     </div>
   </section>
 </template>
 <script>
-import Bezier from "~/components/Bezier.vue";
 export default {
-  components: {
-    Bezier,
-  },
+  name: "Hero",
 };
 </script>
 <style scoped>
-.cover-image {
-  background-image: url("https://res.cloudinary.com/dix4ngy25/image/upload/q_auto/v1569176653/k9ibuwgqxliidk9wu2ay.jpg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
-  min-height: 250px;
-}
-.is-primary {
-  background-color: rgb(92, 219, 149);
-}
-.columns {
-  height: 100%;
-  margin: 0;
-}
-.text-container {
-  padding: 3rem 1.5rem;
-  position: relative;
-}
-.text,
-.button {
-  z-index: 2;
-  position: relative;
-}
-
-.text {
-  color: black;
-}
-.button {
-  margin-top: 15px;
-}
 .hero {
-  min-height: 300px;
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-.curve {
+
+.hero-background {
   position: absolute;
-  right: -200px;
-  top: 0;
-  height: 100%;
-  z-index: 1;
+  inset: 0;
+  background-image: url("https://res.cloudinary.com/dix4ngy25/image/upload/q_auto/v1569176653/k9ibuwgqxliidk9wu2ay.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scale(1.05);
 }
 
-.subtitle {
-  font-weight: 700;
-}
-.is-link {
-  background-color: rgba(5, 56, 106, 0.8);
-}
-.is-link:hover {
-  background-color: rgba(5, 56, 106, 1);
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(45, 90, 74, 0.85) 0%,
+    rgba(45, 90, 74, 0.7) 50%,
+    rgba(45, 90, 74, 0.5) 100%
+  );
 }
 
-p {
-  font-size: 20px;
-  padding-bottom: 20px;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-text {
+  color: white;
 }
 
 .title {
-    font-size: 72px;
-    font-weight: 400;
-    font-family: Prociono, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding-bottom: 10px;
+  font-size: 4rem;
+  font-weight: 300;
+  font-family: Prociono, Georgia, serif;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  letter-spacing: 0.02em;
+  color: white !important;
 }
 
-@media (max-width: 760px) {
-  .columns {
-    display: flex;
-    flex-direction: column-reverse;
+.logo {
+  height: 80px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.tagline {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  opacity: 0.95;
+}
+
+.hero-badges {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button.primary {
+  background: white;
+  color: #2D5A4A;
+}
+
+.button.primary:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.button.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.button.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.scroll-indicator span {
+  display: block;
+  width: 24px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  position: relative;
+}
+
+.scroll-indicator span::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 4px;
+  height: 8px;
+  background: white;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+  0% { opacity: 1; top: 8px; }
+  100% { opacity: 0; top: 20px; }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
   }
-  .curve {
-    display: none;
-  }
+
   .title {
-    font-size: 64px;
+    font-size: 2.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  .tagline {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .hero-badges {
+    gap: 0.5rem;
+  }
+
+  .badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
   }
 
   .button {
-    font-size: 24px;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
   }
 }
 </style>

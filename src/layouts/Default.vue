@@ -1,31 +1,27 @@
 <template>
-  <div>
-    <navbar />
-    <div style="min-height: 90vh">
-    <slot/>
-    </div>
-    <div style="margin-top: 50px">
-      <fredtun-footer />
-    </div>
+  <div class="layout">
+    <navbar class="navbar-scrolled" />
+    <main class="main-content">
+      <slot/>
+    </main>
+    <fredtun-footer />
   </div>
 </template>
 <script>
 import Navbar from '~/components/Navbar.vue';
-import Banner from '~/components/Banner.vue';
 import FredtunFooter from '~/components/FredtunFooter.vue';
 export default {
  components: {
    Navbar,
-   Banner,
    FredtunFooter
  },
- layout: 'blank' 
+ layout: 'blank'
 }
 </script>
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  font-family: 'Inter', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
@@ -34,6 +30,13 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
 }
 
 *,
@@ -43,32 +46,33 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.main-content {
+  flex: 1;
+  padding-top: 80px;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.navbar-scrolled .navbar-logo {
+  color: #2D5A4A !important;
+}
+
+.navbar-scrolled .navbar-item {
+  color: #333 !important;
+}
+
+.navbar-scrolled .navbar-cta {
+  background: #2D5A4A !important;
+  color: white !important;
 }
 </style>
