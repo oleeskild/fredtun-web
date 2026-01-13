@@ -10,25 +10,45 @@
         <div class="contact-grid">
           <div class="contact-info">
             <div class="contact-card">
-              <div class="person-header">
-                <div class="person-avatar">
-                  <img src="https://www.skudeaakra.no/-/media/banker/skudeaakra/ansatte/Kristian-Lassesen.jpg?mw=800" alt="Kristian Lassesen" />
+              <div class="people-grid">
+                <div class="person">
+                  <div class="person-avatar">
+                    <img src="https://www.skudeaakra.no/-/media/banker/skudeaakra/ansatte/Kristian-Lassesen.jpg?mw=800" alt="Kristian Lassesen" />
+                  </div>
+                  <div class="person-title">
+                    <h3>Kristian Lassesen</h3>
+                    <span class="role">Daglig leder</span>
+                  </div>
+                  <div class="contact-details">
+                    <a href="tel:90089979" class="contact-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                      900 89 979
+                    </a>
+                    <a href="mailto:kristian@fredtun.org" class="contact-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                      kristian@fredtun.org
+                    </a>
+                  </div>
                 </div>
-                <div class="person-title">
-                  <h3>Kristian Lassesen</h3>
-                  <span class="role">Daglig leder</span>
-                </div>
-              </div>
-              <div class="person-info">
-                <div class="contact-details">
-                  <a href="tel:90089979" class="contact-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    900 89 979
-                  </a>
-                  <a href="mailto:kristian@fredtun.org" class="contact-link">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                    kristian@fredtun.org
-                  </a>
+
+                <div class="person">
+                  <div class="person-avatar">
+                    <img src="https://g.acdn.no/obscura/API/dynamic/r1/ece5/tr_1200_1200_s_f/0000/haug/2017/12/13/10/d5063acd-7e3e-4b03-a882-c7aa2068fa0d.jpg?chk=24081E" alt="Geir Sofus Sommerfeldt" />
+                  </div>
+                  <div class="person-title">
+                    <h3>Geir Sofus Sommerfeldt</h3>
+                    <span class="role">Daglig leder</span>
+                  </div>
+                  <div class="contact-details">
+                    <a href="tel:95973600" class="contact-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                      959 73 600
+                    </a>
+                    <a href="mailto:geir@sommerfeldt.no" class="contact-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                      geir@sommerfeldt.no
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -128,20 +148,28 @@ export default {
   padding: 2rem;
 }
 
-.person-header {
+.people-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.person {
+  text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .person-avatar {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 3px solid #2D5A4A;
+  margin-bottom: 1rem;
 }
 
 .person-avatar img {
@@ -151,8 +179,12 @@ export default {
   object-position: center top;
 }
 
+.person-title {
+  margin-bottom: 0.75rem;
+}
+
 .person-title h3 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #1a1a1a;
   margin-bottom: 0.25rem;
@@ -160,20 +192,14 @@ export default {
 
 .role {
   color: #2D5A4A;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 
-.person-info {
-  border-top: 1px solid #eee;
-  padding-top: 1.5rem;
-}
-
 .contact-details {
-  margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .contact-link {
@@ -286,13 +312,19 @@ export default {
     padding: 0 1rem 2rem;
   }
 
-  .person-header {
-    flex-direction: column;
-    text-align: center;
+  .people-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
-  .person-title h3 {
-    font-size: 1.3rem;
+  .person {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .person:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
   }
 }
-</stylee
+</style>
