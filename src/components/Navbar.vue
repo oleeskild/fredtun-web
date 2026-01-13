@@ -20,10 +20,10 @@
       </div>
 
       <div class="navbar-menu" :class="{ 'is-active': navbarToggled }">
-        <g-link to="/arrangementer" class="navbar-item">Arrangementer</g-link>
-        <g-link to="/leie" class="navbar-item">Utleie & Priser</g-link>
-        <g-link to="/om-oss" class="navbar-item">Om Fredtun</g-link>
-        <g-link to="/kontakt" class="navbar-item navbar-cta">Kontakt Oss</g-link>
+        <g-link to="/arrangementer" class="navbar-item" @click.native="closeMenu">Arrangementer</g-link>
+        <g-link to="/leie" class="navbar-item" @click.native="closeMenu">Utleie & Priser</g-link>
+        <g-link to="/om-oss" class="navbar-item" @click.native="closeMenu">Om Fredtun</g-link>
+        <g-link to="/kontakt" class="navbar-item navbar-cta" @click.native="closeMenu">Kontakt Oss</g-link>
       </div>
     </div>
   </nav>
@@ -41,19 +41,6 @@ export default {
       return this.$route && this.$route.path === '/';
     }
   },
-  watch: {
-    '$route': {
-      handler() {
-        // Scroll to top and reset state on route change
-        if (typeof window !== 'undefined') {
-          window.scrollTo(0, 0);
-        }
-        this.isScrolled = false;
-        this.navbarToggled = false;
-      },
-      immediate: false
-    }
-  },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
     this.handleScroll(); // Check initial scroll position
@@ -64,6 +51,9 @@ export default {
   methods: {
     handleScroll() {
       this.isScrolled = window.scrollY > 50;
+    },
+    closeMenu() {
+      this.navbarToggled = false;
     }
   }
 };
