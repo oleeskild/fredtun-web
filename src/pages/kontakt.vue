@@ -56,7 +56,7 @@
             <div class="info-cards">
               <div class="info-card">
                 <h4>Besøksadresse</h4>
-                <p>Austre Karmoyveg 820<br>4260 Karmøy</p>
+                <p>Austre Karmøyveg 820<br>4260 Karmøy</p>
               </div>
               <div class="info-card">
                 <h4>Postadresse</h4>
