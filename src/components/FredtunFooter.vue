@@ -3,10 +3,10 @@
     <div class="footer-main">
       <div class="footer-container">
         <div class="footer-brand">
-          <g-link to="/" class="footer-logo">
+          <a href="/" class="footer-logo">
             <img src="/logofred.png" alt="Fredtun" />
             <span>Fredtun</span>
-          </g-link>
+          </a>
           <p class="footer-tagline">
             Et unikt sted ved Karmsundet for leirskole, arrangementer og overnatting.
           </p>
@@ -28,11 +28,11 @@
         <div class="footer-nav">
           <h3>Sider</h3>
           <nav>
-            <g-link to="/">Hjem</g-link>
-            <g-link to="/leie">Utleie & Priser</g-link>
-            <g-link to="/arrangementer">Arrangementer</g-link>
-            <g-link to="/om-oss">Om Fredtun</g-link>
-            <g-link to="/kontakt">Kontakt Oss</g-link>
+            <a href="/">Hjem</a>
+            <a href="/leie">Utleie & Priser</a>
+            <a href="/arrangementer">Arrangementer</a>
+            <a href="/om-oss">Om Fredtun</a>
+            <a href="/kontakt">Kontakt Oss</a>
           </nav>
         </div>
 

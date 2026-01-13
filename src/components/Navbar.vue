@@ -2,10 +2,10 @@
   <nav class="navbar" :class="{ 'scrolled': isScrolled || !isHomepage }" role="navigation" aria-label="main navigation">
     <div class="navbar-container">
       <div class="navbar-brand">
-        <g-link to="/" class="navbar-logo">
+        <a href="/" class="navbar-logo">
           <img src="/logofred.png" alt="Fredtun" />
           <span>Fredtun</span>
-        </g-link>
+        </a>
         <button
           class="navbar-burger"
           :class="{ 'is-active': navbarToggled }"
@@ -20,10 +20,10 @@
       </div>
 
       <div class="navbar-menu" :class="{ 'is-active': navbarToggled }">
-        <g-link to="/arrangementer" class="navbar-item" @click.native="closeMenu">Arrangementer</g-link>
-        <g-link to="/leie" class="navbar-item" @click.native="closeMenu">Utleie & Priser</g-link>
-        <g-link to="/om-oss" class="navbar-item" @click.native="closeMenu">Om Fredtun</g-link>
-        <g-link to="/kontakt" class="navbar-item navbar-cta" @click.native="closeMenu">Kontakt Oss</g-link>
+        <a href="/arrangementer" class="navbar-item">Arrangementer</a>
+        <a href="/leie" class="navbar-item">Utleie & Priser</a>
+        <a href="/om-oss" class="navbar-item">Om Fredtun</a>
+        <a href="/kontakt" class="navbar-item navbar-cta">Kontakt Oss</a>
       </div>
     </div>
   </nav>
@@ -51,9 +51,6 @@ export default {
   methods: {
     handleScroll() {
       this.isScrolled = window.scrollY > 50;
-    },
-    closeMenu() {
-      this.navbarToggled = false;
     }
   }
 };
