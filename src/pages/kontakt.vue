@@ -3,7 +3,7 @@
     <div class="contact-page">
       <section class="contact-hero">
         <h1>Kontakt Oss</h1>
-        <p>Vi hjelper deg gjerne med sporsmal om utleie, arrangementer eller annet.</p>
+        <p>Vi hjelper deg gjerne med spørsmål om utleie, arrangementer eller annet.</p>
       </section>
 
       <section class="contact-content">
