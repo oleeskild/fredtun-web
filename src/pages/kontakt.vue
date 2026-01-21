@@ -130,9 +130,8 @@ export default {
 }
 
 .people-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 .person {
@@ -293,19 +292,5 @@ export default {
     padding: 0 1rem 2rem;
   }
 
-  .people-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .person {
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
-  }
-
-  .person:last-child {
-    padding-bottom: 0;
-    border-bottom: none;
-  }
 }
 </style>
