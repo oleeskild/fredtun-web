@@ -60,12 +60,17 @@
               <span class="support-value">3361.23.85160</span>
             </div>
           </div>
+          <a href="/fast-giver" class="support-link">Bli fast giver →</a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="footer-container">
         <p>&copy; {{ currentYear }} Fredtun. Alle rettigheter reservert.</p>
+        <nav class="legal-links">
+          <a href="/fast-giver/avtalevilkar">Avtalevilkår</a>
+          <a href="/personvernerklaering">Personvernerklæring</a>
+        </nav>
       </div>
     </div>
   </footer>
@@ -265,12 +270,45 @@ export default {
 .footer-bottom .footer-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
 }
 
 .footer-bottom p {
   color: #666;
   font-size: 0.875rem;
   margin: 0;
+}
+
+.legal-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legal-links a {
+  color: #666;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+  color: #fff;
+}
+
+.support-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.support-link:hover {
+  color: #8fbfad;
 }
 
 @media (max-width: 900px) {
