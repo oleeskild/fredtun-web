@@ -23,7 +23,7 @@
         Foreningen Fredtun<br />
         Austre Karmøyveg 820<br />
         Org.nr.: 871 458 022<br />
-        E-post: <a href="mailto:post@fredtun.no">post@fredtun.no</a><br />
+        E-post: <a href="mailto:post@fredtun.org">post@fredtun.org</a><br />
         Telefon: <a href="tel:90089979">900 89 979</a>
       </address>
 
@@ -139,7 +139,7 @@
       </ul>
       <p>Dersom du ønsker å benytte deg av rettighetene dine, kan du kontakte oss:</p>
       <address>
-        E-post: <a href="mailto:post@fredtun.no">post@fredtun.no</a><br />
+        E-post: <a href="mailto:post@fredtun.org">post@fredtun.org</a><br />
         Telefon: <a href="tel:90089979">900 89 979</a>
       </address>
 
