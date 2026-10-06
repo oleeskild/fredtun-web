@@ -3,6 +3,7 @@
     <navbar />
     <hero />
     <rent-info-box />
+    <support-box />
     <fredtun-footer />
   </div>
 </template>
@@ -11,6 +12,7 @@
 import Navbar from '~/components/Navbar.vue'
 import Hero from '~/components/Hero.vue'
 import RentInfoBox from '~/components/RentInfoBox.vue'
+import SupportBox from '~/components/SupportBox.vue'
 import FredtunFooter from '~/components/FredtunFooter.vue'
 
 export default {
@@ -19,6 +21,7 @@ export default {
     Navbar,
     Hero,
     RentInfoBox,
+    SupportBox,
     FredtunFooter,
   },
   layout: 'blank',

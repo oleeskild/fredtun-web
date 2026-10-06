@@ -23,3 +23,23 @@
     from = "/utleie/*"
     to = "/leie/:splat"
     status = 301
+
+[[redirects]]
+    from = "/personvernerklæring"
+    to = "/personvernerklaering"
+    status = 301
+
+[[redirects]]
+    from = "/personvernerkl%C3%A6ring"
+    to = "/personvernerklaering"
+    status = 301
+
+[[redirects]]
+    from = "/fast-giver/avtalevilkår"
+    to = "/fast-giver/avtalevilkar"
+    status = 301
+
+[[redirects]]
+    from = "/fast-giver/avtalevilk%C3%A5r"
+    to = "/fast-giver/avtalevilkar"
+    status = 301
